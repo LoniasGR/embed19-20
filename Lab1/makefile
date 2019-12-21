@@ -1,5 +1,5 @@
-CC = gcc
-CFLAGS = -O0
+CC =\ gcc
+CFLAGS = -O0 -c
 
 all: phods
 
