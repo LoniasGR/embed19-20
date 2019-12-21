@@ -1,6 +1,8 @@
 #!/bin/bash
 
-for 1 .. 10
+rm -f results.txt
+
+for i in {1..10}
 do 
     ./phods >> resuts.txt
 done
