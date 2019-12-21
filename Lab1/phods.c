@@ -169,7 +169,7 @@ int main()
   gettimeofday(&t_after, NULL);
   long elapsed = (t_after.tv_sec-t_before.tv_sec)*1000000 + t_after.tv_usec-t_before.tv_usec;
 
-  printf("Time elapsed: %ld\n", elapsed);
+  printf("Time elapsed: %ld\n microseconds.", elapsed);
 
   return 0;
 }
