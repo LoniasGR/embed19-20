@@ -1,4 +1,4 @@
-CC =\ gcc
+CC = gcc
 CFLAGS = -O0 -c
 
 all: phods
