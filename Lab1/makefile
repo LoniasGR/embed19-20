@@ -7,7 +7,7 @@ phods.o: phods.c
 	$(CC) $(CFLAGS) phods.c -o phods.o
 
 phods: phods.o
-	$(CC) -o phods phods.o
+	$(CC) phods.o -o phods
 
 clean:
 	-rm -f phods.o
