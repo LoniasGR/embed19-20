@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/time.h>
 
 #define N 144     /*Frame dimension for QCIF format*/
 #define M 176     /*Frame dimension for QCIF format*/
@@ -159,8 +160,14 @@ int main()
   int current[N][M], previous[N][M], motion_vectors_x[N/B][M/B],
       motion_vectors_y[N/B][M/B], i, j;
 
+  struct timeval t_before, t_after;
+  
 	read_sequence(current,previous);
+  
+  gettimeofday(&t_before, NULL);
   phods_motion_estimation(current,previous,motion_vectors_x,motion_vectors_y);
+  gettimeofday(&t_after, NULL);
+  long elapsed = (t_after.tv_sec-t_before.tv_sec)*1000000 + t_after.tv_usec-t_before.tv_usec;
 
   return 0;
 }
