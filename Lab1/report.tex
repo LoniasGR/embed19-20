@@ -1,0 +1,137 @@
+\documentclass{article}
+
+    % Input language encoding
+    \usepackage[utf8]{inputenc}
+   
+    % Output languages
+    \usepackage[english, greek]{babel}
+    \usepackage{alphabeta}
+    
+    % Fonts
+    \usepackage[T1,LGR]{fontenc}
+    \usepackage{lmodern}
+
+    % Images
+    \usepackage{graphicx}
+    \usepackage{float}
+    \usepackage{caption}
+    \usepackage{subcaption}
+
+    % Math
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+
+    % Paragraph Formatting
+    \usepackage{parskip}
+
+    % Code
+    \usepackage{listings}
+    \usepackage{fancyvrb}
+
+    % Different Enumerations
+    \usepackage{enumitem}
+
+    % Trees
+    \usepackage{qtree}
+
+    % Other Drawings
+    \usepackage{tikz}
+    \usetikzlibrary{shapes,backgrounds}
+
+    % Links
+    \usepackage{hyperref}
+
+    % Color
+    \usepackage{color}
+   
+    % Setup
+
+    % For hyperlinks
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue,
+        filecolor=magenta,      
+        urlcolor=cyan,
+    }
+
+    \urlstyle{same}
+    
+    % For code
+    \definecolor{codegreen}{rgb}{0,0.6,0}
+    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+     
+    \lstdefinestyle{mystyle}{
+        backgroundcolor=\color{backcolour},   
+        commentstyle=\color{codegreen},
+        keywordstyle=\color{magenta},
+        numberstyle=\tiny\color{codegray},
+        stringstyle=\color{codepurple},
+        basicstyle=\fontsize{8}{11}\selectfont\ttfamily,
+        breakatwhitespace=false,         
+        breaklines=true,                 
+        captionpos=b,                    
+        keepspaces=true,                 
+        numbers=left,                    
+        numbersep=5pt,                  
+        showspaces=false,                
+        showstringspaces=false,
+        showtabs=false,                  
+        tabsize=4
+    }
+
+    \lstset{style=mystyle}
+
+    % For math
+    \DeclareMathSizes{10}{10}{10}{10}
+    \setlength{\parindent}{0cm}
+
+    % Foreign Language macro
+    \newcommand{\english}[1]{\foreignlanguage{english}{{#1}}}
+
+    \title{1η Εργαστηριακή Ασκήσεων \\
+        Σχεδιασμός Ενσωματωμένων Συστημάτων}
+\begin{document}
+
+\pagenumbering{arabic}
+\date{}
+\author{Λεωνίδας Αβδελάς $|$ ΑΜ: 03113182}
+
+\maketitle
+\newpage
+
+\section*{Ζητούμενο 1ο - \english{Loop Optimizations \\ \& Design Space Exploration}}
+
+\subsection*{1.}
+\begin{itemize}
+    \item Για την έκδοση λειτουργικού και την έκδοση πυρήνα \english{Linux}, θα χρησιμοποιήσουμε τις εντολές \english{\lstinline[language=bash]{cat /etc/os-release}} και \english{\lstinline[language=bash]{uname -r}}, αντίστοιχα. Τα αποτελέσματα είναι \english{PRETTY\_NAME=Debian GNU/Linux 10 (buster)} και \english{4.19.0-6-amd64}.
+    \item Για την ιεραρχία μνήμης, χρησιμοποιήσαμε την εντολή \english{\lstinline[language=bash]{sudo lshw -C memory}}. Τα αποτελέσματα φαίνονται στον παρακάτω πίνακα:\\
+    \begin{otherlanguage}{english}
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|}\hline
+                & L1 cache & L2 cache & L3 cache & RAM \\ \hline
+                Size & 32KiB & 256KiB & 3MiB & 8GiB \\ \hline
+           \end{tabular}
+        \end{center}
+        \end{otherlanguage}
+    \item Τις πληροφορίες για τους πυρήνες θα τις βρούμε στο αρχείο \english{/proc/cpuinfo}. Έτσι, για τον αριθμό των πυρήνων, τρέχουμε:
+    \\ \english{\lstinline[language=bash]{cat /proc/cpuinfo \| grep processor \| wc -l}} \\
+    από όπου παίρνουμε την απάντηση 4 και για την ταχύτητα τους, τρέχουμε :\\
+    \english{\lstinline[language=bash]{cat /proc/cpuinfo \|  grep 'cpu MHz'}} \\
+    από όπου παίρνουμε την απάντηση \english{~800Mhz}.
+\end{itemize}
+
+\subsection*{2.}
+
+Προσθέτοντας τον υπολογισμό χρόνου στο πρόγραμμα μας και τρέχοντας το 10 φορές, έχουμε τα παρακάτω αποτελέσματα: \\
+\begin{otherlanguage}{english}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}\hline
+            & Average & Maximum & Minimum \\ \hline
+            Time &  12129.0ms & 15032ms & 11332ms\\ \hline
+       \end{tabular}
+    \end{center}
+    \end{otherlanguage}
+
+\end{document}
