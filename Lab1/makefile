@@ -9,7 +9,7 @@ phods.o: phods.c
 phods: phods.o
 	$(CC) phods.o -o phods
 
-phods_optimized.o: phods_optimized.clean
+phods_optimized.o: phods_optimized.c
 	$(CC) $(CFLAGS) phods_optimized.c -o phods_optimized.o
 
 phods_optimized: phods_optimized.o
