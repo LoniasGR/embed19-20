@@ -1,1 +1,11 @@
+# C object files
 *.o
+
+# Final executable
+phods
+
+# Latex intermediate files
+*.log
+*.gz
+
+
