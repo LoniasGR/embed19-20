@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -O0 -c
 
-all: phods phods_optimized clean
+all: phods phods_optimized 
 
 phods.o: phods.c
 	$(CC) $(CFLAGS) phods.c -o phods.o
