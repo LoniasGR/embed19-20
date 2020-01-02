@@ -1,8 +1,9 @@
 #!/bin/bash
 
-rm -rf results.txt
+file="$1"
+rm -rf "$file"
 
 for i in {1..10}
 do 
-    ./phods >> results.txt
+    ./phods >> "$file"
 done
