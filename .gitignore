@@ -3,6 +3,7 @@
 
 # Final executable
 phods
+phods_optimized
 
 # Latex intermediate files
 *.log
