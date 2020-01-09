@@ -9,4 +9,7 @@ phods_optimized
 *.log
 *.gz
 
+# VSCode
+.vscode
+
 
