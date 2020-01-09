@@ -1,22 +1,22 @@
 CC = gcc
 CFLAGS = -O0 -c
 
-all: phods phods_optimized 
+all: phods phods_optimized phods_DSE
 
 phods.o: phods.c
-	$(CC) $(CFLAGS) code/phods.c -o phods.o
+	$(CC) $(CFLAGS) phods.c -o phods.o
 
 phods: phods.o
 	$(CC) phods.o -o phods
 
 phods_optimized.o: phods_optimized.c
-	$(CC) $(CFLAGS) code/phods_optimized.c -o phods_optimized.o
+	$(CC) $(CFLAGS) phods_optimized.c -o phods_optimized.o
 
 phods_optimized: phods_optimized.o
 	$(CC) phods_optimized.o -o phods_optimized
 
 phods_DSE.o: phods_DSE.c
-	$(CC) $(CFLAGS) code/phods_DSE.c -o phods_DSE.o
+	$(CC) $(CFLAGS) phods_DSE.c -o phods_DSE.o
 
 phods_DSE: phods_DSE.o
 	$(CC) phods_DSE.o -o phods_DSE

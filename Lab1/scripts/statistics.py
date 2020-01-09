@@ -9,9 +9,9 @@ if (len(sys.argv) < 1):
 values = []
 with open(sys.argv[1], 'r') as f:
     for l in f.readlines():
-        values.append(int(l))
+        values.append(float(l))
 
-if (len(sys.argv) < 2):
+if (len(sys.argv) < 3):
     print('Average time: ' + str(np.average(values)) + 'ms.')
     print('Maximum time ' + str(np.max(values)) + 'ms.')
     print('Minimum time ' + str(np.min(values)) + 'ms.')
