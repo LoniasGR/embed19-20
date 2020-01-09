@@ -3,8 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <unistd.h>
+#include <sys/time.h>
 
 #define N 144     /*Frame dimension for QCIF format*/
 #define M 176     /*Frame dimension for QCIF format*/
@@ -148,12 +147,13 @@ int main()
   
 	read_sequence(current,previous);
   
-  struct timespec begin, end;
-  clock_gettime(CLOCK_MONOTONIC, &begin);
+  struct timeval begin, end;
+  gettimeofday(&begin, NULL);
   phods_motion_estimation(current,previous,motion_vectors_x,motion_vectors_y);
-  clock_gettime(CLOCK_MONOTONIC, &end);
-  double time_spent = ( end.tv_sec - begin.tv_sec )
-          + ( end.tv_nsec - begin.tv_nsec ) / 1e9;
-  printf("%lf\n", time_spent);
+  gettimeofday(&end, NULL);
+  long  time_spent =(end.tv_sec-begin.tv_sec)*1000000 + 
+      end.tv_usec-begin.tv_usec;
+  printf("%ld\n", time_spent);
+
   return 0;
 }
