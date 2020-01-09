@@ -13,8 +13,8 @@ with open(sys.argv[1], 'r') as f:
 
 if (len(sys.argv) < 3):
     print('Average time: ' + format(np.average(values), '.6f') + 's.')
-    print('Maximum time ' + format(np.max(values), '.6f') + 'ms.')
-    print('Minimum time ' + format(np.min(values), '.6f') + 'ms.')
+    print('Maximum time ' + format(np.max(values), '.6f') + 's.')
+    print('Minimum time ' + format(np.min(values), '.6f') + 's.')
 
 else:
     print(format(np.average(values), '.6f'))
