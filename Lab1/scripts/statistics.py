@@ -12,9 +12,9 @@ with open(sys.argv[1], 'r') as f:
         values.append(float(l))
 
 if (len(sys.argv) < 3):
-    print('Average time: ' + str(np.average(values)) + 'ms.')
-    print('Maximum time ' + str(np.max(values)) + 'ms.')
-    print('Minimum time ' + str(np.min(values)) + 'ms.')
+    print('Average time: ' + format(np.average(values), '.6f') + 's.')
+    print('Maximum time ' + format(np.max(values), '.6f') + 'ms.')
+    print('Minimum time ' + format(np.min(values), '.6f') + 'ms.')
 
 else:
-    print(str(np.average(values)))
+    print(format(np.average(values), '.6f'))
