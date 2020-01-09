@@ -143,7 +143,7 @@ void phods_motion_estimation(int current[N][M], int previous[N][M],
 
 int main(int argc, char *argv[])
 {  
-  B = argv[1] - '0';
+  B = atoi(argv[1]);
   int current[N][M], previous[N][M], motion_vectors_x[N/B][M/B],
       motion_vectors_y[N/B][M/B], i, j;
 
