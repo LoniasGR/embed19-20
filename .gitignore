@@ -4,6 +4,7 @@
 # Final executable
 phods
 phods_optimized
+phods_DSE
 
 # Latex intermediate files
 *.log
