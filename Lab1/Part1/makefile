@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -O0 -c
 
-all: phods phods_optimized phods_DSE
+all: phods phods_optimized phods_DSE phods_DSE_rectangle
 
 phods.o: phods.c
 	$(CC) $(CFLAGS) phods.c -o phods.o
@@ -21,5 +21,10 @@ phods_DSE.o: phods_DSE.c
 phods_DSE: phods_DSE.o
 	$(CC) phods_DSE.o -o phods_DSE
 
+phods_DSE_rectangle.o: phods_DSE_rectangle.c
+	$(CC) $(CFLAGS) phods_DSE_rectangle.c -o phods_DSE_rectangle.o
+
+phods_DSE: phods_DSE_rectangle.o
+	$(CC) phods_DSE_rectangle.o -o phods_DSE_rectangle
 clean:
-	-rm -f phods.o phods_optimized.o phods_DSE.o
+	-rm -f phods.o phods_optimized.o phods_DSE.o phods_DSE_rectangle.o
