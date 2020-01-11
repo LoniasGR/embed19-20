@@ -24,7 +24,7 @@ phods_DSE: phods_DSE.o
 phods_DSE_rectangle.o: phods_DSE_rectangle.c
 	$(CC) $(CFLAGS) phods_DSE_rectangle.c -o phods_DSE_rectangle.o
 
-phods_DSE: phods_DSE_rectangle.o
+phods_DSE_rectangle: phods_DSE_rectangle.o
 	$(CC) phods_DSE_rectangle.o -o phods_DSE_rectangle
 clean:
 	-rm -f phods.o phods_optimized.o phods_DSE.o phods_DSE_rectangle.o
