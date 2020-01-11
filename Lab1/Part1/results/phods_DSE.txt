@@ -1,6 +1,6 @@
 phods_DSE results
-B: 1, Average Time: 14658.20
-B: 2, Average Time: 11438.00
-B: 4, Average Time: 10447.90
-B: 8, Average Time: 10446.70
-B: 16, Average Time: 10115.20
+B: 1, Average Time: 13679.40
+B: 2, Average Time: 10570.90
+B: 4, Average Time: 9845.10
+B: 8, Average Time: 9632.50
+B: 16, Average Time: 9532.40
