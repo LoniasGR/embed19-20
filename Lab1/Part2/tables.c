@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/time.h>
 
 int main()
 {
@@ -9,6 +10,7 @@ int main()
 	double a1= 0.5;
 	double a2= 1;
 	double a3= 1.5;
+	struct timeval start, end;
 
 	x1 = (double*) malloc(N*sizeof(double));
 	x2 = (double*) malloc(N*sizeof(double));
@@ -33,11 +35,20 @@ int main()
 	in which all the parameters for Design Space Exploration (DSE) and loop 
 	transfornations should be defined.
 	*/
+ 	gettimeofday(&start, NULL);
+
 	for (i=0; i<=N-1; i++)
 	{
 		//This loop needs to be modified after Orio's execution...
 		y[i] = y[i] + a1*x1[i] + a2*x2[i] + a3*x3[i];
 	}
+	
+	gettimeofday(&end, NULL);
+	
+	long  time_spent =(end.tv_sec-start.tv_sec)*1000000 + 
+      end.tv_usec-start.tv_usec;
+
+   printf("%ld\n", time_spent);
 
 	return 0;
 
