@@ -5,6 +5,7 @@
 phods
 phods_optimized
 phods_DSE
+phods_DSE_rectangle
 
 # Latex intermediate files
 *.log
@@ -13,4 +14,5 @@ phods_DSE
 # VSCode
 .vscode
 
-
+# Other
+*.dot
