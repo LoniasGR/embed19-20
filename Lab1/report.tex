@@ -129,7 +129,7 @@
     \begin{center}
         \begin{tabular}{|c|c|c|c|}\hline
             & Average & Maximum & Minimum \\ \hline
-            Time &  11796.1us & 15874us & 11335ms\\ \hline
+            Time &  11796.1us & 15874us & 11335us\\ \hline
        \end{tabular}
     \end{center}
     \end{otherlanguage}
@@ -146,7 +146,7 @@
     \begin{center}
         \begin{tabular}{|c|c|c|c|}\hline
             & Average & Maximum & Minimum \\ \hline
-            Time &  10975.us & 15245us & 10475ms\\ \hline
+            Time &  10975us & 15245us & 10475us\\ \hline
        \end{tabular}
     \end{center}
     \end{otherlanguage}
@@ -167,4 +167,40 @@
 \includegraphics[scale=0.65]{Part1/results/results_boxplots.pdf}
 
 Παρατηρούμε ότι όλα τα προγράμματα έχουν ένα τρέξιμο με πολύ μεγάλο χρόνο σχετικά με τον μέσο όρο. Αυτό συμβαίνει γιατί στα διαδοχικά τρεξίματα έχουμε επαναχρησιμοποίηση των δεδομένων στην cache και έτσι μειωμένους χρόνος. Ακόμα, η βελτίωση μεταξύ του βήματος 4 και βήματος 5 είναι πολύ μικρή, και αρα η μεγαλύτερη αναζήτηση δεν είναι απαραίτητα χρήσιμη. Αυτό συμβαίνει γιατί μετά από κάποιο σημείο (και επειδή ο υπολογιστής που χρησιμοποιήσαμε είναι αρκετά σύγχρονος και γενικού σκοπού), οι καθυστερήσεις οφείλονται σε άλλους παράγοντες και όχι στο ίδιο το πρόγραμμα.
+
+\section*{Ζητούμενο 2: Αυτοματοιποιημένη \\ βελτίωση κώδικα}
+
+\subsection*{1.}
+Για το μη μετασχηματισμένο πρόγραμμα, έχουμε τα παρακάτω αποτελέσματα:
+\begin{otherlanguage}{english}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}\hline
+            & Average & Maximum & Minimum \\ \hline
+            Time &  742166.6us & 747550us & 733782us\\ \hline
+       \end{tabular}
+    \end{center}
+\end{otherlanguage}
+
+\subsection*{2.}
+Για το \english{\textbf{exhaustive search}}, το \english{Unrolling Factor} ήταν 3.
+Για το \english{\textbf{Randomsearch}}, το \english{Unrolling Factor} ήταν 4.
+Για το \english{\textbf{Simplex}}, το \english{Unrolling Factor} ήταν 4.
+
+Παρατηρώντας τις εξόδους των τριών searches μπορούμε εύκολα να δούμε ότι η διαφορά στο αποτέλεσμα οφείλεται στους παρακάτω λόγους:
+\begin{itemize}
+    \item Στο \english{Random Search}, δεν έγινε έλεγχος της τιμής 3 για το \english{UF} αλλά έγινε στην τιμή 4. Πιστεύουμε ότι το αποτέλεσμα αυτό είναι ικανοποιητικό για την μείωση των παραμέτρων από 33 σε 10.
+    \item Στο \english{Simplex}, το πρόβλημα ήταν ότι δεν βρέθηκε ο μέσος όρος του χρόνου τρεξίματος για τα πιθανά αποτελέσματα, καθώς αυτό θα καθυστερούσε πολύ την ευριστική (τουλάχιστον αυτό είναι το συμπέρασμα μας από την έλεγχο των \english{logs}). Για την μια φορά τρεξίματος των παραμέτρων, η τιμή για \english{UF} 4 ήταν καλύτερη από 3. Ξανά θεωρούμε πώς η μείωση των παραμέτρων άξιζει την μικρή διαφορά σε χρόνο εκτέλεσης.
+\end{itemize}
+\subsection*{3.}
+\begin{otherlanguage}{english}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}\hline
+            & Average & Maximum & Minimum \\ \hline
+            Non-Optimized Time &  742166.6us & 747550us & 733782us\\ \hline
+            Exhaustive Optimized Time &  643717.50us & 649229us & 640655us\\ \hline
+            Rand \& Simplex Optimized Time &  668284.70us & 673756us & 662471us\\ \hline
+       \end{tabular}
+    \end{center}
+\end{otherlanguage}
+Τα αποτελέσματα είναι όπως περιμέναμε, αισθητά βελτιωμένα χάρη στο \english{loop unrolling}, και η διαφορά μεταξύ των \english{UF} 3 και 4 αρκετά μικρή.
 \end{document}
