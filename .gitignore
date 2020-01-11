@@ -6,6 +6,7 @@ phods
 phods_optimized
 phods_DSE
 phods_DSE_rectangle
+tables
 
 # Latex intermediate files
 *.log
