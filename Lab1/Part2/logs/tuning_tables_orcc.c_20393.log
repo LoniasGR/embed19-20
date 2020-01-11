@@ -1,0 +1,374 @@
+
+====== START ORIO: server2020-01-11_20:17:56 ======
+
+----- begin reading the source file: tables_orcc.c -----
+----- finished reading the source file -----
+
+----- begin parsing annotations -----
+----- finished parsing annotations -----
+
+----- begin optimizations -----
+Search_Space         = 3.200e+01
+Number_of_Parameters = 01
+Numeric_Parameters   = 01
+Binary_Parameters    = 00
+['UF']
+[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]]
+
+----- begin simplex search -----
+
+(run 1) initial simplex: [[0], [31]]
+.
+ building the original code:
+	cc -O0  -DORIO_REPS=10 -DORIGINAL -o __orio_perftest_original.exe __orio_perftest1.c timer_cpu.o 
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest1.exe __orio_perftest1.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest1.exe  
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest2.exe __orio_perftest2.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest2.exe  
+-> simplex: [[0], [31]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest3.exe __orio_perftest3.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest3.exe  
+--> inner contraction to [19]
+-> simplex: [[0], [19]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest4.exe __orio_perftest4.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest4.exe  
+--> inner contraction to [11]
+-> simplex: [[0], [11]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest5.exe __orio_perftest5.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest5.exe  
+--> inner contraction to [7]
+-> simplex: [[7], [0]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest6.exe __orio_perftest6.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest6.exe  
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest7.exe __orio_perftest7.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest7.exe  
+--> inner contraction to [3]
+-> simplex: [[3], [7]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest8.exe __orio_perftest8.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest8.exe  
+--> inner contraction to [5]
+-> simplex: [[3], [5]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest9.exe __orio_perftest9.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest9.exe  
+--> inner contraction to [4]
+-> simplex: [[4], [3]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest10.exe __orio_perftest10.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest10.exe  
+--> shrinkage on [4]
+-> simplex: [[4], [3]]
+-> converged with simplex: [[4], [3]]
+-> best simplex coordinate: [4], cost: 6.648066e-01
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest11.exe __orio_perftest11.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest11.exe  
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest12.exe __orio_perftest12.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest12.exe  
+---> better neighbor found: [3], cost: 6.558200e-01
+>>>> best coordinate found: [3], cost: 6.558200e-01
+
+(run 2) initial simplex: [[11], [28]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest13.exe __orio_perftest13.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest13.exe  
+-> simplex: [[11], [28]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest14.exe __orio_perftest14.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest14.exe  
+--> inner contraction to [21]
+-> simplex: [[11], [21]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest15.exe __orio_perftest15.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest15.exe  
+--> inner contraction to [17]
+-> simplex: [[11], [17]]
+--> reflection to [2]
+-> simplex: [[2], [11]]
+--> inner contraction to [7]
+-> simplex: [[2], [7]]
+--> inner contraction to [5]
+-> simplex: [[2], [5]]
+--> inner contraction to [4]
+-> simplex: [[2], [4]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+-> converged with simplex: [[2], [3]]
+-> best simplex coordinate: [2], cost: 6.606518e-01
+---> better neighbor found: [3], cost: 6.558200e-01
+
+(run 3) initial simplex: [[8], [15]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest16.exe __orio_perftest16.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest16.exe  
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest17.exe __orio_perftest17.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest17.exe  
+-> simplex: [[8], [15]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest18.exe __orio_perftest18.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest18.exe  
+--> inner contraction to [12]
+-> simplex: [[8], [12]]
+--> reflection to [2]
+-> simplex: [[2], [8]]
+--> inner contraction to [6]
+-> simplex: [[2], [6]]
+--> inner contraction to [4]
+-> simplex: [[2], [4]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+-> converged with simplex: [[2], [3]]
+-> best simplex coordinate: [2], cost: 6.606518e-01
+---> better neighbor found: [3], cost: 6.558200e-01
+
+(run 4) initial simplex: [[5], [26]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest19.exe __orio_perftest19.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest19.exe  
+-> simplex: [[5], [26]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest20.exe __orio_perftest20.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest20.exe  
+--> shrinkage on [5]
+-> simplex: [[5], [20]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest21.exe __orio_perftest21.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest21.exe  
+--> inner contraction to [14]
+-> simplex: [[5], [14]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest22.exe __orio_perftest22.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest22.exe  
+--> inner contraction to [10]
+-> simplex: [[5], [10]]
+--> inner contraction to [8]
+-> simplex: [[5], [8]]
+--> inner contraction to [7]
+-> simplex: [[5], [7]]
+--> reflection to [2]
+-> simplex: [[2], [5]]
+--> inner contraction to [4]
+-> simplex: [[2], [4]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+-> converged with simplex: [[2], [3]]
+-> best simplex coordinate: [2], cost: 6.606518e-01
+---> better neighbor found: [3], cost: 6.558200e-01
+
+(run 5) initial simplex: [[27], [28]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest23.exe __orio_perftest23.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest23.exe  
+-> simplex: [[27], [28]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest24.exe __orio_perftest24.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest24.exe  
+--> outer contraction to [26]
+-> simplex: [[27], [26]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest25.exe __orio_perftest25.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest25.exe  
+--> shrinkage on [27]
+-> simplex: [[27], [26]]
+-> converged with simplex: [[27], [26]]
+-> best simplex coordinate: [27], cost: 7.303581e-01
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest26.exe __orio_perftest26.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest26.exe  
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest27.exe __orio_perftest27.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest27.exe  
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest28.exe __orio_perftest28.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest28.exe  
+---> better neighbor found: [24], cost: 7.246270e-01
+
+(run 6) initial simplex: [[14], [28]]
+-> simplex: [[14], [28]]
+--> inner contraction to [22]
+-> simplex: [[14], [22]]
+--> reflection to [2]
+-> simplex: [[2], [14]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest29.exe __orio_perftest29.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest29.exe  
+--> inner contraction to [9]
+-> simplex: [[2], [9]]
+--> inner contraction to [6]
+-> simplex: [[2], [6]]
+--> inner contraction to [4]
+-> simplex: [[2], [4]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+-> converged with simplex: [[2], [3]]
+-> best simplex coordinate: [2], cost: 6.606518e-01
+---> better neighbor found: [3], cost: 6.558200e-01
+
+(run 7) initial simplex: [[26], [28]]
+-> simplex: [[26], [28]]
+--> outer contraction to [24]
+-> simplex: [[26], [24]]
+--> shrinkage on [26]
+-> simplex: [[26], [25]]
+--> shrinkage on [26]
+-> simplex: [[26], [25]]
+-> converged with simplex: [[26], [25]]
+-> best simplex coordinate: [26], cost: 7.306290e-01
+---> better neighbor found: [24], cost: 7.246270e-01
+
+(run 8) initial simplex: [[11], [26]]
+-> simplex: [[11], [26]]
+--> shrinkage on [11]
+-> simplex: [[11], [22]]
+--> shrinkage on [11]
+-> simplex: [[11], [19]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest30.exe __orio_perftest30.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest30.exe  
+--> inner contraction to [16]
+-> simplex: [[11], [16]]
+--> reflection to [3]
+-> simplex: [[3], [11]]
+--> inner contraction to [8]
+-> simplex: [[3], [8]]
+--> inner contraction to [6]
+-> simplex: [[3], [6]]
+--> shrinkage on [3]
+-> simplex: [[3], [5]]
+--> inner contraction to [4]
+-> simplex: [[4], [3]]
+--> shrinkage on [4]
+-> simplex: [[4], [3]]
+-> converged with simplex: [[4], [3]]
+-> best simplex coordinate: [4], cost: 6.648066e-01
+---> better neighbor found: [3], cost: 6.558200e-01
+
+(run 9) initial simplex: [[9], [22]]
+-> simplex: [[9], [22]]
+--> inner contraction to [17]
+-> simplex: [[9], [17]]
+--> shrinkage on [9]
+-> simplex: [[9], [15]]
+--> reflection to [0]
+-> simplex: [[0], [9]]
+--> inner contraction to [5]
+-> simplex: [[5], [0]]
+.
+ building test:
+	cc -O0  -DORIO_REPS=10 -o __orio_perftest31.exe __orio_perftest31.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest31.exe  
+--> inner contraction to [2]
+-> simplex: [[2], [5]]
+--> inner contraction to [4]
+-> simplex: [[2], [4]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+--> shrinkage on [2]
+-> simplex: [[2], [3]]
+-> converged with simplex: [[2], [3]]
+-> best simplex coordinate: [2], cost: 6.606518e-01
+---> better neighbor found: [3], cost: 6.558200e-01
+
+(run 10) initial simplex: [[3], [9]]
+-> simplex: [[3], [9]]
+--> inner contraction to [7]
+-> simplex: [[3], [7]]
+--> inner contraction to [5]
+-> simplex: [[3], [5]]
+--> inner contraction to [4]
+-> simplex: [[4], [3]]
+--> shrinkage on [4]
+-> simplex: [[4], [3]]
+-> converged with simplex: [[4], [3]]
+-> best simplex coordinate: [4], cost: 6.648066e-01
+---> better neighbor found: [3], cost: 6.558200e-01
+simplex: total runs reached
+----- end simplex search -----
+----- begin summary -----
+ best coordinate: [3]={'UF': 4}, cost=6.558200e-01, transfer_time=inf, inputs=[('N', 100000000)], search_time=298.79, runs=10
+----- end summary -----
+----- finish optimizations -----
+
+----- begin writing the output file(s) -----
+--> writing output to: _tables_orcc.c
+----- finished writing the output file(s) -----
+
+====== END ORIO: server2020-01-11_20:22:55 [output: _tables_orcc.c, log: tuning_tables_orcc.c_20393.log] ======
