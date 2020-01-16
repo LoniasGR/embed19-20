@@ -1,9 +1,9 @@
-#define SLL_CL
+//#define SLL_CL
 //#define DLL_CL
 //#define DYN_ARR_CL
 
 //#define SLL_PK
-#define DLL_PK
+//#define DLL_PK
 //#define DYN_ARR_PK
 
 #if defined(SLL_CL) || defined(SLL_PK)

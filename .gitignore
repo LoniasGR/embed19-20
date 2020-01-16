@@ -2,14 +2,25 @@
 *.o
 
 # Final executable
+
+# Lab 1
 phods
 phods_optimized
 phods_DSE
 phods_DSE_rectangle
 tables
 
+# Lab 2
+drr_SLLcl_SLLpk 
+drr_DLLcl_SLLpk 
+drr_SLLcl_DLLpk 
+drr_DLLcl_DLLpk            
+drr_DYNARRcl_DLLpk drr_DYNARRcl_SLLpk 
+drr_DYNARRcl_DYNARRpk                     
+drr_SLLcl_DYNARRpk 
+drr_DLLcl_DYNARRpk
+
 # Latex intermediate files
-*.log
 *.gz
 
 # VSCode
