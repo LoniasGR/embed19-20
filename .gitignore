@@ -20,6 +20,10 @@ drr_DYNARRcl_SLLpk
 drr_DYNARRcl_DYNARRpk                     
 drr_SLLcl_DYNARRpk 
 drr_DLLcl_DYNARRpk
+dijkstra
+dijkstra_SLL
+dijkstra_DLL
+dijkstra_DYNARR
 
 # Latex intermediate files
 *.gz

@@ -1,0 +1,343 @@
+--------------------------------------------------------------------------------
+Command:            ./dijkstra_DYNARR input.dat
+Massif arguments:   --massif-out-file=./test.out
+ms_print arguments: ./test.out
+--------------------------------------------------------------------------------
+
+
+    KB
+363.7^                                                                       #
+     |                                                                    @:@#
+     |                                                                 ::@@:@#
+     |                                                               ::::@@:@#
+     |                                                           ::::: ::@@:@#
+     |                                                        @::::: : ::@@:@#
+     |                                                    ::::@: ::: : ::@@:@#
+     |                                                ::::::: @: ::: : ::@@:@#
+     |                                             :::: : ::: @: ::: : ::@@:@#
+     |                                        ::::::: : : ::: @: ::: : ::@@:@#
+     |                                    ::::: :: :: : : ::: @: ::: : ::@@:@#
+     |                                 :::::: : :: :: : : ::: @: ::: : ::@@:@#
+     |                             :::::::::: : :: :: : : ::: @: ::: : ::@@:@#
+     |                         ::::: : :::::: : :: :: : : ::: @: ::: : ::@@:@#
+     |                       ::: ::: : :::::: : :: :: : : ::: @: ::: : ::@@:@#
+     |                   ::::::: ::: : :::::: : :: :: : : ::: @: ::: : ::@@:@#
+     |                :::: : ::: ::: : :::::: : :: :: : : ::: @: ::: : ::@@:@#
+     |             ::::::: : ::: ::: : :::::: : :: :: : : ::: @: ::: : ::@@:@#
+     |        :::::::::::: : ::: ::: : :::::: : :: :: : : ::: @: ::: : ::@@:@#
+     |       :: :: ::::::: : ::: ::: : :::::: : :: :: : : ::: @: ::: : ::@@:@#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   102.3
+
+Number of snapshots: 89
+ Detailed snapshots: [3, 41, 54, 64, 74, 84, 88 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        169,120            4,672            4,648            24            0
+  2      7,136,059            4,776            4,736            40            0
+  3      7,323,814           17,560           14,168         3,392            0
+80.68% (14,168B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.99% (6,144B) 0x4018F1: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->34.99% (6,144B) 0x4012C7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   ->34.99% (6,144B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|     ->34.99% (6,144B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|       
+->23.33% (4,096B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->23.33% (4,096B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->23.33% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|     ->23.33% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|       ->23.33% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|         ->23.33% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|           ->23.33% (4,096B) 0x4016BD: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|             
+->18.72% (3,288B) 0x401255: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->18.66% (3,276B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| | ->18.66% (3,276B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| |   
+| ->00.07% (12B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.14% (552B) 0x48E60F9: __fopen_internal (iofopen.c:65)
+| ->03.14% (552B) 0x40168B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   
+->00.50% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4      8,873,719           18,232           13,476         4,756            0
+  5     11,401,830           24,544           16,632         7,912            0
+  6     13,207,134           40,936           26,872        14,064            0
+  7     15,680,888           46,216           29,512        16,704            0
+  8     17,260,281           49,648           31,228        18,420            0
+  9     19,628,755           61,936           37,372        24,564            0
+ 10     20,982,911           64,072           38,440        25,632            0
+ 11     22,965,435           69,784           41,296        28,488            0
+ 12     24,749,362           81,880           47,344        34,536            0
+ 13     26,000,448           83,512           48,160        35,352            0
+ 14     27,703,233           86,968           49,888        37,080            0
+ 15     29,630,745           99,640           56,224        43,416            0
+ 16     32,487,240          105,112           58,960        46,152            0
+ 17     35,062,735          118,528           65,668        52,860            0
+ 18     37,143,518          121,648           67,228        54,420            0
+ 19     38,632,717          132,328           72,568        59,760            0
+ 20     40,875,014          136,696           74,752        61,944            0
+ 21     43,027,254          142,840           77,824        65,016            0
+ 22     44,593,968          152,560           82,684        69,876            0
+ 23     47,266,471          157,960           85,384        72,576            0
+ 24     49,335,301          169,432           91,120        78,312            0
+ 25     51,462,446          173,176           92,992        80,184            0
+ 26     53,025,130          184,648           98,728        85,920            0
+ 27     54,850,482          187,504          100,156        87,348            0
+ 28     55,999,433          188,656          100,732        87,924            0
+ 29     58,062,736          201,592          107,200        94,392            0
+ 30     59,710,886          203,512          108,160        95,352            0
+ 31     61,056,454          206,440          109,624        96,816            0
+ 32     62,700,744          217,216          115,012       102,204            0
+ 33     65,119,882          221,176          116,992       104,184            0
+ 34     67,821,878          236,560          124,684       111,876            0
+ 35     69,609,072          238,648          125,728       112,920            0
+ 36     72,467,130          246,856          129,832       117,024            0
+ 37     74,561,477          257,152          134,980       122,172            0
+ 38     77,484,816          264,328          138,568       125,760            0
+ 39     79,730,767          274,936          143,872       131,064            0
+ 40     81,479,856          279,160          145,984       133,176            0
+ 41     83,735,955          292,312          152,560       139,752            0
+52.19% (152,560B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.77% (139,632B) 0x401255: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->47.70% (139,440B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| | ->47.70% (139,440B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| |   
+| ->00.07% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.80% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.80% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.40% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.40% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.40% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.40% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.40% (4,096B) 0x4016BD: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   |         
+|   ->01.40% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.40% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.40% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.40% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.40% (4,096B) 0x4015ED: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|             ->01.40% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|               
+->01.40% (4,096B) 0x4018F1: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->01.40% (4,096B) 0x4012C7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   ->01.40% (4,096B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|     ->01.40% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|       
+->00.22% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 42     85,648,396          295,120          153,964       141,156            0
+ 43     87,916,815          307,624          160,216       147,408            0
+ 44     89,366,506          309,256          161,032       148,224            0
+ 45     91,332,476          314,128          163,468       150,660            0
+ 46     93,869,033          329,488          171,148       158,340            0
+ 47     95,300,238          330,832          171,820       159,012            0
+ 48     97,385,115          336,712          174,760       161,952            0
+ 49     99,448,007          347,680          180,244       167,436            0
+ 50     99,757,600          347,896          180,352       167,544            0
+ 51     99,951,439          348,184          180,496       167,688            0
+ 52    100,131,475          349,480          181,144       168,336            0
+ 53    100,324,564          349,960          181,384       168,576            0
+ 54    100,510,085          350,536          181,672       168,864            0
+51.83% (181,672B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.14% (168,744B) 0x401255: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->48.07% (168,516B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| | ->48.07% (168,516B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| |   
+| ->00.07% (228B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.34% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.34% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.17% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.17% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.17% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.17% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.17% (4,096B) 0x4016BD: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   |         
+|   ->01.17% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.17% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.17% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.17% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.17% (4,096B) 0x4015ED: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|             ->01.17% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|               
+->01.17% (4,096B) 0x4018F1: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->01.17% (4,096B) 0x4012C7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   ->01.17% (4,096B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|     ->01.17% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|       
+->00.18% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 55    100,910,312          350,848          181,828       169,020            0
+ 56    101,079,469          351,328          182,068       169,260            0
+ 57    101,251,029          352,168          182,488       169,680            0
+ 58    101,519,838          352,648          182,728       169,920            0
+ 59    101,692,822          352,936          182,872       170,064            0
+ 60    101,876,293          353,440          183,124       170,316            0
+ 61    102,050,833          353,872          183,340       170,532            0
+ 62    102,223,419          354,424          183,616       170,808            0
+ 63    102,399,255          354,832          183,820       171,012            0
+ 64    102,568,643          355,624          184,216       171,408            0
+51.80% (184,216B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.17% (171,288B) 0x401255: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->48.10% (171,048B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| | ->48.10% (171,048B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| |   
+| ->00.07% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.30% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.30% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.15% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.15% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.15% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.15% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.15% (4,096B) 0x4016BD: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   |         
+|   ->01.15% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.15% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.15% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.15% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.15% (4,096B) 0x4015ED: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|             ->01.15% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|               
+->01.15% (4,096B) 0x4018F1: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->01.15% (4,096B) 0x4012C7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   ->01.15% (4,096B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|     ->01.15% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|       
+->00.18% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 65    102,770,773          361,600          187,204       174,396            0
+ 66    102,954,730          362,752          187,780       174,972            0
+ 67    103,124,451          363,232          188,020       175,212            0
+ 68    103,302,304          363,784          188,296       175,488            0
+ 69    103,477,443          363,976          188,392       175,584            0
+ 70    103,819,243          364,120          188,464       175,656            0
+ 71    103,992,839          364,216          188,512       175,704            0
+ 72    104,232,822          364,384          188,596       175,788            0
+ 73    104,502,942          364,792          188,800       175,992            0
+ 74    104,753,841          365,176          188,992       176,184            0
+51.75% (188,992B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.21% (176,064B) 0x401255: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->48.15% (175,824B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| | ->48.15% (175,824B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| |   
+| ->00.07% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.24% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.24% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.12% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.12% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.12% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.12% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.12% (4,096B) 0x4016BD: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   |         
+|   ->01.12% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.12% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.12% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.12% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.12% (4,096B) 0x4015ED: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|             ->01.12% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|               
+->01.12% (4,096B) 0x4018F1: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->01.12% (4,096B) 0x4012C7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   ->01.12% (4,096B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|     ->01.12% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|       
+->00.18% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 75    104,928,321          365,368          189,088       176,280            0
+ 76    105,103,251          365,944          189,376       176,568            0
+ 77    105,272,726          366,496          189,652       176,844            0
+ 78    105,467,065          366,928          189,868       177,060            0
+ 79    105,654,764          367,264          190,036       177,228            0
+ 80    105,832,071          367,912          190,360       177,552            0
+ 81    106,004,754          368,296          190,552       177,744            0
+ 82    106,184,374          368,944          190,876       178,068            0
+ 83    106,364,552          369,496          191,152       178,344            0
+ 84    106,541,583          369,880          191,344       178,536            0
+51.73% (191,344B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.24% (178,416B) 0x401255: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->48.17% (178,176B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| | ->48.17% (178,176B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| |   
+| ->00.06% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.21% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.21% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.11% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.11% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.11% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.11% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.11% (4,096B) 0x4016BD: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   |         
+|   ->01.11% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.11% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.11% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.11% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.11% (4,096B) 0x4015ED: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|             ->01.11% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|               
+->01.11% (4,096B) 0x4018F1: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->01.11% (4,096B) 0x4012C7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   ->01.11% (4,096B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|     ->01.11% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|       
+->00.17% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 85    106,713,557          370,768          191,788       178,980            0
+ 86    106,890,152          371,272          192,040       179,232            0
+ 87    107,062,478          371,680          192,244       179,436            0
+ 88    107,231,569          372,448          192,628       179,820            0
+51.72% (192,628B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.25% (179,700B) 0x401255: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->48.18% (179,460B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| | ->48.18% (179,460B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| |   
+| ->00.06% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.20% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.20% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.10% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.10% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.10% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.10% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.10% (4,096B) 0x4016BD: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   |         
+|   ->01.10% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.10% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.10% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.10% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.10% (4,096B) 0x4015ED: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|             ->01.10% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|               
+->01.10% (4,096B) 0x4018F1: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+| ->01.10% (4,096B) 0x4012C7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|   ->01.10% (4,096B) 0x401598: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|     ->01.10% (4,096B) 0x40175B: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_DYNARR)
+|       
+->00.17% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+

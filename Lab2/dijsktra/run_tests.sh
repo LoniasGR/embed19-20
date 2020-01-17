@@ -9,10 +9,10 @@ for e in "${execs[@]}"; do
     valgrind --log-file="mem_accesses_log.txt" \
         --tool=lackey \
         --trace-mem=yes \
-        ./"$e"
+        ./"$e" input.dat
     cat mem_accesses_log.txt | grep 'I\| L' | wc -l
-    valgrind --tool=massif --massif-out-file=./test.out ./"$e"
-    ms_print ./test.out > results/mem_footprint_log_"${NAME[1]}.txt
+    valgrind --tool=massif --massif-out-file=./test.out ./"$e" input.dat
+    ms_print ./test.out > results/mem_footprint_log_"${NAME[1]}".txt
     rm test.out
     rm mem_accesses_log.txt
 

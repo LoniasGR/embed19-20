@@ -1,0 +1,736 @@
+--------------------------------------------------------------------------------
+Command:            ./dijkstra_SLL input.dat
+Massif arguments:   --massif-out-file=./test.out
+ms_print arguments: ./test.out
+--------------------------------------------------------------------------------
+
+
+    KB
+359.2^                                                                       :
+     |                                                                   @@@@#
+     |                                                               @ @@@@@@#
+     |                                                             ::@:@@@@@@#
+     |                                                        @  ::: @ @@@@@@#
+     |                                                       :@::::: @ @@@@@@#
+     |                                                  ::::@:@: ::: @ @@@@@@#
+     |                                              : :@:: :@:@: ::: @ @@@@@@#
+     |                                            :::::@:: :@:@: ::: @ @@@@@@#
+     |                                       :::@:: : :@:: :@:@: ::: @ @@@@@@#
+     |                                    :::: :@:: : :@:: :@:@: ::: @ @@@@@@#
+     |                                  ::: :: :@:: : :@:: :@:@: ::: @ @@@@@@#
+     |                               :::: : :: :@:: : :@:: :@:@: ::: @ @@@@@@#
+     |                           @::@:::: : :: :@:: : :@:: :@:@: ::: @ @@@@@@#
+     |                         ::@: @:::: : :: :@:: : :@:: :@:@: ::: @ @@@@@@#
+     |                      :::::@: @:::: : :: :@:: : :@:: :@:@: ::: @ @@@@@@#
+     |                  :::::: ::@: @:::: : :: :@:: : :@:: :@:@: ::: @ @@@@@@#
+     |              :::::: ::: ::@: @:::: : :: :@:: : :@:: :@:@: ::: @ @@@@@@#
+     |           @::::: :: ::: ::@: @:::: : :: :@:: : :@:: :@:@: ::: @ @@@@@@#
+     |        :@@@::::: :: ::: ::@: @:::: : :: :@:: : :@:: :@:@: ::: @ @@@@@@#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   71.80
+
+Number of snapshots: 97
+ Detailed snapshots: [4, 5, 18, 20, 30, 36, 40, 42, 47, 54, 56, 57, 58, 68, 69, 76, 77, 78, 88, 93 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        170,216            4,672            4,648            24            0
+  2      7,137,169            4,872            4,840            32            0
+  3      8,590,362           18,432           12,124         6,308            0
+  4     10,258,326           23,064           14,084         8,980            0
+61.06% (14,084B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.51% (8,652B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->37.46% (8,640B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->37.46% (8,640B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.05% (12B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.76% (4,096B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->17.76% (4,096B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->17.76% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|     ->17.76% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|       ->17.76% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|         ->17.76% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|           ->17.76% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             
+->02.57% (592B) 0x4019D0: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->02.57% (592B) 0x4013E7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   ->02.57% (592B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   | ->02.57% (592B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->02.39% (552B) 0x48E60F9: __fopen_internal (iofopen.c:65)
+| ->02.39% (552B) 0x4017AE: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   
+->00.83% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  5     11,605,729           45,720           28,436        17,284            0
+62.20% (28,436B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.78% (14,988B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->32.73% (14,964B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->32.73% (14,964B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.05% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.92% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->17.92% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->08.96% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->08.96% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->08.96% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->08.96% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->08.96% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->08.96% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->08.96% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->08.96% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->08.96% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->08.96% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->08.96% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->09.87% (4,512B) 0x4019D0: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->09.87% (4,512B) 0x4013E7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   ->09.87% (4,512B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   | ->09.87% (4,512B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.21% (552B) 0x48E60F9: __fopen_internal (iofopen.c:65)
+| ->01.21% (552B) 0x4017AE: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   
+->00.42% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  6     12,620,996           44,088           27,020        17,068            0
+  7     13,738,169           47,328           28,412        18,916            0
+  8     15,276,483           64,104           37,544        26,560            0
+  9     16,496,575           63,720           36,768        26,952            0
+ 10     17,526,225           66,216           37,764        28,452            0
+ 11     19,322,312           83,568           47,116        36,452            0
+ 12     20,632,664           84,240           46,916        37,324            0
+ 13     22,073,681           87,912           48,416        39,496            0
+ 14     23,089,653          100,248           55,180        45,068            0
+ 15     24,749,340          104,016           56,636        47,380            0
+ 16     26,589,732          118,656           64,380        54,276            0
+ 17     27,963,756          120,744           64,980        55,764            0
+ 18     28,793,134          135,432           73,212        62,220            0
+54.06% (73,212B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->44.36% (60,084B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->44.30% (60,000B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->44.30% (60,000B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.06% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->06.05% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->06.05% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->03.02% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->03.02% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->03.02% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->03.02% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->03.02% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->03.02% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->03.02% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->03.02% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->03.02% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->03.02% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->03.02% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->03.10% (4,192B) 0x4019D0: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->03.10% (4,192B) 0x4013E7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   ->03.10% (4,192B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   | ->03.10% (4,192B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.55% (744B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 19     29,995,381          135,960           72,976        62,984            0
+ 20     31,423,901          138,576           73,864        64,712            0
+53.30% (73,864B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.48% (64,416B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->46.42% (64,332B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->46.42% (64,332B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.06% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->05.91% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.91% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->02.96% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->02.96% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->02.96% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->02.96% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->02.96% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->02.96% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->02.96% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->02.96% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->02.96% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->02.96% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->02.96% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->00.91% (1,256B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 21     32,462,965          154,152           82,516        71,636            0
+ 22     34,183,418          153,792           81,528        72,264            0
+ 23     34,964,276          156,096           82,524        73,572            0
+ 24     36,294,683          170,112           90,132        79,980            0
+ 25     37,759,333          170,928           89,948        80,980            0
+ 26     38,582,276          186,624           98,768        87,856            0
+ 27     40,480,689          186,456           97,812        88,644            0
+ 28     41,813,544          203,904          107,428        96,476            0
+ 29     43,357,357          203,640          106,576        97,064            0
+ 30     44,672,718          219,504          115,272       104,232            0
+52.51% (115,272B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.49% (102,048B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->46.42% (101,904B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->46.42% (101,904B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (144B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.73% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.73% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.87% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.87% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.87% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.87% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.87% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.87% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.87% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.87% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.87% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.87% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.87% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->01.95% (4,288B) 0x4019D0: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->01.95% (4,288B) 0x4013E7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   ->01.95% (4,288B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   | ->01.95% (4,288B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.34% (744B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 31     45,531,776          219,528          114,896       104,632            0
+ 32     46,901,210          220,704          114,964       105,740            0
+ 33     48,298,927          240,288          125,804       114,484            0
+ 34     48,991,627          236,880          123,496       113,384            0
+ 35     50,709,855          240,864          125,052       115,812            0
+ 36     51,768,842          256,968          134,008       122,960            0
+52.15% (134,008B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.00% (120,768B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->46.93% (120,600B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->46.93% (120,600B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (168B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.19% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.19% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.59% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.59% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.59% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.59% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.59% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.59% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.59% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.59% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.59% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.59% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.59% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->01.67% (4,304B) 0x4019D0: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->01.67% (4,304B) 0x4013E7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   ->01.67% (4,304B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   | ->01.67% (4,304B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.29% (744B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 37     52,967,075          258,552          134,392       124,160            0
+ 38     53,996,036          258,000          133,604       124,396            0
+ 39     55,645,835          273,024          141,660       131,364            0
+ 40     56,851,685          275,328          142,464       132,864            0
+51.74% (142,464B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.99% (132,120B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->47.92% (131,940B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->47.92% (131,940B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (180B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.98% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.98% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.49% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.49% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.49% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.49% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.49% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.49% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.49% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.49% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.49% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.49% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.49% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->00.78% (2,152B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 41     57,678,490          277,032          143,088       133,944            0
+ 42     58,836,632          294,384          152,732       141,652            0
+51.88% (152,732B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.36% (139,428B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->47.30% (139,236B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->47.30% (139,236B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.78% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.78% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.39% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.39% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.39% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.39% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.39% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.39% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.39% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.39% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.39% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.39% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.39% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->01.48% (4,368B) 0x4019D0: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->01.48% (4,368B) 0x4013E7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   ->01.48% (4,368B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   | ->01.48% (4,368B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.25% (744B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43     60,387,759          293,760          151,664       142,096            0
+ 44     61,913,083          309,552          160,224       149,328            0
+ 45     63,113,213          310,608          160,300       150,308            0
+ 46     64,627,276          313,512          161,316       152,196            0
+ 47     65,895,094          331,968          171,556       160,412            0
+51.68% (171,556B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.63% (158,124B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->47.57% (157,908B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->47.57% (157,908B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (216B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.47% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.47% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.23% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.23% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.23% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.23% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.23% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.23% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.23% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.23% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.23% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.23% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.23% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->01.35% (4,496B) 0x4019D0: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->01.35% (4,496B) 0x4013E7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   ->01.35% (4,496B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   | ->01.35% (4,496B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.22% (744B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 48     66,922,872          330,168          170,036       160,132            0
+ 49     68,124,185          332,448          170,828       161,620            0
+ 50     68,294,567          333,456          171,340       162,116            0
+ 51     68,465,712          333,744          171,432       162,312            0
+ 52     68,638,543          334,560          171,832       162,728            0
+ 53     68,808,895          335,016          172,020       162,996            0
+ 54     68,894,292          335,328          172,168       163,160            0
+51.34% (172,168B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.61% (163,008B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->48.55% (162,792B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->48.55% (162,792B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.06% (216B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.44% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.44% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.22% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.22% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.22% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.22% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.22% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.22% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.22% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.22% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.22% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.22% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.22% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->00.29% (968B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 55     69,068,815          335,712          172,312       163,400            0
+ 56     69,121,296          340,488          175,092       165,396            0
+51.42% (175,092B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.33% (164,556B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->48.26% (164,328B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->48.26% (164,328B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (228B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.41% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.41% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.20% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.20% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.20% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.20% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.20% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.20% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.20% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.20% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.20% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.20% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.20% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->00.69% (2,344B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 57     69,168,235          343,968          177,108       166,860            0
+51.49% (177,108B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.11% (165,468B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->48.04% (165,240B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->48.04% (165,240B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (228B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.38% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.38% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.19% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.19% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.19% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.19% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.19% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.19% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.19% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.19% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.19% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.19% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.19% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->01.00% (3,448B) in 4 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 58     69,224,028          347,448          179,120       168,328            0
+51.55% (179,120B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.89% (166,392B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->47.82% (166,164B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->47.82% (166,164B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (228B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.36% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.36% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.18% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.18% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.18% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.18% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.18% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.18% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.18% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.18% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.18% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.18% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.18% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->01.09% (3,792B) 0x4019D0: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->01.09% (3,792B) 0x4013E7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   ->01.09% (3,792B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   | ->01.09% (3,792B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.21% (744B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 59     69,394,977          348,984          179,940       169,044            0
+ 60     69,567,080          348,864          179,792       169,072            0
+ 61     69,737,334          348,264          179,364       168,900            0
+ 62     69,911,863          347,784          179,004       168,780            0
+ 63     70,082,206          347,280          178,632       168,648            0
+ 64     70,253,458          349,872          180,072       169,800            0
+ 65     70,427,541          350,184          180,176       170,008            0
+ 66     70,599,424          350,016          180,000       170,016            0
+ 67     70,772,324          349,104          179,388       169,716            0
+ 68     70,943,273          350,664          180,224       170,440            0
+51.40% (180,224B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.34% (169,512B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->48.28% (169,284B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->48.28% (169,284B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (228B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.34% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.34% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.17% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.17% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.17% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.17% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.17% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.17% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.17% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.17% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.17% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.17% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.17% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->00.72% (2,520B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 69     70,997,717          350,976          180,384       170,592            0
+51.39% (180,384B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.34% (169,656B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->48.27% (169,428B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->48.27% (169,428B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.06% (228B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.33% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.33% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.17% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.17% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.17% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.17% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.17% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.17% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.17% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.17% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.17% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.17% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.17% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->00.72% (2,536B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 70     71,168,940          350,640          180,108       170,532            0
+ 71     71,339,746          350,712          180,072       170,640            0
+ 72     71,510,149          350,712          179,996       170,716            0
+ 73     71,680,489          350,736          179,932       170,804            0
+ 74     71,852,018          350,928          179,968       170,960            0
+ 75     72,022,444          351,408          180,172       171,236            0
+ 76     72,117,657          356,304          183,000       173,304            0
+51.36% (183,000B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.40% (172,464B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->48.34% (172,224B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->48.34% (172,224B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.30% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.30% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.15% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.15% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.15% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.15% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.15% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.15% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.15% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.15% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.15% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.15% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.15% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->00.66% (2,344B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 77     72,157,502          360,168          185,244       174,924            0
+51.43% (185,244B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.16% (173,460B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->48.09% (173,220B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->48.09% (173,220B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.27% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.27% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.14% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.14% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.14% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.14% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.14% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.14% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.14% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.14% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.14% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.14% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.14% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->01.00% (3,592B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 78     72,258,665          363,888          187,376       176,512            0
+51.49% (187,376B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.96% (174,504B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->47.89% (174,264B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->47.89% (174,264B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.25% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.25% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.13% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.13% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.13% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.13% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.13% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.13% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.13% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.13% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.13% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.13% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.13% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->01.08% (3,936B) 0x4019D0: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->01.08% (3,936B) 0x4013E7: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   ->01.08% (3,936B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   | ->01.08% (3,936B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.20% (744B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 79     72,429,614          365,424          188,196       177,228            0
+ 80     72,601,140          366,144          188,540       177,604            0
+ 81     72,774,040          365,232          187,928       177,304            0
+ 82     72,944,603          364,776          187,584       177,192            0
+ 83     73,116,706          364,656          187,436       177,220            0
+ 84     73,288,589          364,488          187,260       177,228            0
+ 85     73,461,792          364,608          187,252       177,356            0
+ 86     73,632,438          365,136          187,484       177,652            0
+ 87     73,806,081          365,352          187,532       177,820            0
+ 88     73,976,928          365,424          187,496       177,928            0
+51.31% (187,496B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.50% (177,216B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->48.43% (176,976B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->48.43% (176,976B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.24% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.24% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.12% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.12% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.12% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.12% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.12% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.12% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.12% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.12% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.12% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.12% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.12% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->00.57% (2,088B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 89     74,149,710          365,952          187,728       178,224            0
+ 90     74,320,356          366,480          187,960       178,520            0
+ 91     74,493,999          366,696          188,008       178,688            0
+ 92     74,666,982          366,768          187,972       178,796            0
+ 93     74,768,116          367,608          188,420       179,188            0
+51.26% (188,420B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.64% (178,812B) 0x401375: enqueue (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| ->48.58% (178,572B) 0x4016BB: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| | ->48.58% (178,572B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+| |   
+| ->00.07% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.23% (8,192B) 0x48E571A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.23% (8,192B) 0x48F36FE: _IO_doallocbuf (genops.c:347)
+|   ->01.11% (4,096B) 0x48F2742: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:493)
+|   | ->01.11% (4,096B) 0x48F37B0: _IO_default_uflow (genops.c:362)
+|   |   ->01.11% (4,096B) 0x48D4E05: _IO_vfscanf (vfscanf.c:627)
+|   |     ->01.11% (4,096B) 0x48E3C54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.11% (4,096B) 0x4017E0: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|   |         
+|   ->01.11% (4,096B) 0x48F2986: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:752)
+|     ->01.11% (4,096B) 0x48F1A8D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1251)
+|       ->01.11% (4,096B) 0x48C5B0F: vfprintf (vfprintf.c:1323)
+|         ->01.11% (4,096B) 0x48CE604: printf (printf.c:33)
+|           ->01.11% (4,096B) 0x401710: dijkstra (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|             ->01.11% (4,096B) 0x40187E: main (in /home/lavdelas/projects/embed19-20/Lab2/dijsktra/dijkstra_SLL)
+|               
+->00.39% (1,416B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 94     74,941,759          367,800          188,452       179,348            0
+ 95     75,113,862          367,680          188,304       179,376            0
+ 96     75,288,314          364,296          184,556       179,740            0

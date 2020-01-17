@@ -12,7 +12,7 @@ dijkstra_DLL: dijkstra.c
 	$(CC) $^ -o $@  -DDLL $(CFLAGS)
 
 dijkstra_DYNARR: dijkstra.c
-	$(CC) $^ -o $@  -DDYNARR $(CFLAGS)
+	$(CC) $^ -o $@  -DDYN_ARR $(CFLAGS)
 
 	
 .PHONY : clean
