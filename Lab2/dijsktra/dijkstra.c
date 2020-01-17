@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "dijkstra.h"
 
 #define NUM_NODES                          100
 #define NONE                               9999
@@ -21,6 +22,16 @@ struct _QITEM
 typedef struct _QITEM QITEM;
 
 QITEM *qHead = NULL;
+
+
+#if defined(SLL_CL)
+cdsl_sll *qHead;
+#elif defined(DLL_CL)
+cdsl_dll *qhead;
+#else
+cdsl_dyn_array *qHead;
+#endif
+
              
 int AdjMatrix[NUM_NODES][NUM_NODES];
 
@@ -57,15 +68,8 @@ void enqueue (int iNode, int iDist, int iPrev)
   qNew->iPrev = iPrev;
   qNew->qNext = NULL;
   
-  if (!qLast) 
-    {
-      qHead = qNew;
-    }
-  else
-    {
-      while (qLast->qNext) qLast = qLast->qNext;
-      qLast->qNext = qNew;
-    }
+  qHead->enqueue(0, qHead, (void*)qNew);
+
   g_qCount++;
 
 }
@@ -73,18 +77,11 @@ void enqueue (int iNode, int iDist, int iPrev)
 
 void dequeue (int *piNode, int *piDist, int *piPrev)
 {
-  QITEM *qKill = qHead;
-
-  if (qHead)
-    {
-	
       *piNode = qHead->iNode;
       *piDist = qHead->iDist;
       *piPrev = qHead->iPrev;
-      qHead = qHead->qNext;
-      free(qKill);
+     	qHead->dequeue(0, (qHead));
       g_qCount--;
-    }
 }
 
 
@@ -94,10 +91,7 @@ int qcount (void)
 }
 
 int dijkstra(int chStart, int chEnd) 
-{
-  
-
-  
+{  
   for (ch = 0; ch < NUM_NODES; ch++)
     {
       rgnNodes[ch].iDist = NONE;
@@ -160,6 +154,14 @@ int main(int argc, char *argv[]) {
 	AdjMatrix[i][j]= k;
     }
   }
+
+  #if defined (SLL_CL)
+	qHead = cdsl_sll_init();
+#elif defined (DLL_CL)
+	qHead = cdsl_dll_init();
+#else 
+	qHead = cdsl_dyn_array_init();	
+#endif
 
   /* finds 10 shortest paths between nodes */
   for (i=0,j=NUM_NODES/2;i<20;i++,j++) {
