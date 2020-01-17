@@ -17,12 +17,8 @@ struct _QITEM
   int iNode;
   int iDist;
   int iPrev;
-  struct _QITEM *qNext;
 };
 typedef struct _QITEM QITEM;
-
-QITEM *qHead = NULL;
-
 
 #if defined(SLL_CL)
 cdsl_sll *qHead;
