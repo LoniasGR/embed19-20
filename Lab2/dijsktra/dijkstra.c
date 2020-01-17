@@ -20,9 +20,9 @@ struct _QITEM
 };
 typedef struct _QITEM QITEM;
 
-#if defined(SLL_CL)
+#if defined(SLL)
 cdsl_sll *qHead;
-#elif defined(DLL_CL)
+#elif defined(DLL)
 cdsl_dll *qhead;
 #else
 cdsl_dyn_array *qHead;
@@ -151,9 +151,9 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  #if defined (SLL_CL)
+  #if defined (SLL)
 	qHead = cdsl_sll_init();
-#elif defined (DLL_CL)
+#elif defined (DLL)
 	qHead = cdsl_dll_init();
 #else 
 	qHead = cdsl_dyn_array_init();	

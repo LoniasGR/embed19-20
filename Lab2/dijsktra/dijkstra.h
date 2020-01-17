@@ -4,7 +4,7 @@
 #if defined(DLL)
 #include "../synch_implementations/cdsl_deque.h"
 #endif
-#if defined(DYN_ARR)
+#if defined(DYN_ARRF)
 #include "../synch_implementations/cdsl_dyn_array.h"
 #endif
 
