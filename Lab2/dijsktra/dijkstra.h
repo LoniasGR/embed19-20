@@ -1,10 +1,10 @@
-#if defined(SLL_CL) || defined(SLL_PK)
+#if defined(SLL)
 #include "../synch_implementations/cdsl_queue.h"
 #endif
-#if defined(DLL_CL) || defined(DLL_PK)
+#if defined(DLL)
 #include "../synch_implementations/cdsl_deque.h"
 #endif
-#if defined(DYN_ARR_CL) || defined(DYN_ARR_PK)
+#if defined(DYN_ARR)
 #include "../synch_implementations/cdsl_dyn_array.h"
 #endif
 
