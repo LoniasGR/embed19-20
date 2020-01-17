@@ -1,0 +1,1157 @@
+--------------------------------------------------------------------------------
+Command:            ./drr_DYNARRcl_DYNARRpk
+Massif arguments:   --massif-out-file=./test.out
+ms_print arguments: ./test.out
+--------------------------------------------------------------------------------
+
+
+    MB
+1.075^                                                                       #
+     |                                                                       #
+     |                                                                      @#
+     |                                                                     @@#
+     |                                                                 @:::@@#
+     |                                                            @::::@:::@@#
+     |                                   ::@:::::::::::::::::::::@@::::@:::@@#
+     |                                 @:: @::::: : :::: : :: : :@@::::@:::@@#
+     |                                @@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |                                @@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |                                @@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |                           : ::@@@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |                           ::::@@@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |                         ::::::@@@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |                 @@@:::::::::::@@@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |                :@ @: :: ::::::@@@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |            @:  :@ @: :: ::::::@@@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |            @::::@ @: :: ::::::@@@:: @::::: : :::: : :: : :@@::::@:::@@#
+     |      ::@@::@:: :@ @: :: ::::::@@@:: @::::: : :::: : :: : :@@::::@:::@@#
+     | :::@@::@ ::@:: :@ @: :: ::::::@@@:: @::::: : :::: : :: : :@@::::@:::@@#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   286.0
+
+Number of snapshots: 89
+ Detailed snapshots: [4, 7, 10, 15, 16, 26, 27, 28, 31, 50, 52, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 83, 84, 85, 86, 87, 88 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      5,899,350          112,048           80,032        32,016            0
+  2     10,731,600          108,448           78,232        30,216            0
+  3     14,373,816          105,168           76,600        28,568            0
+  4     20,426,874           96,944           72,496        24,448            0
+74.78% (72,496B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.23% (36,096B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->37.23% (36,096B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   ->37.23% (36,096B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|     
+->18.67% (18,096B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->18.67% (18,096B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->13.43% (13,024B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->13.34% (12,936B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->13.34% (12,936B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.09% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.64% (3,528B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.64% (3,528B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.78% (1,728B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.75% (1,696B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.75% (1,696B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.03% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  5     26,261,786          165,640          120,020        45,620            0
+  6     32,291,577          161,432          117,932        43,500            0
+  7     36,408,527          157,784          116,108        41,676            0
+73.59% (116,108B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->38.90% (61,376B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->38.90% (61,376B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   ->38.90% (61,376B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|     
+->21.97% (34,668B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->21.97% (34,668B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.04% (14,256B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->08.98% (14,168B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->08.98% (14,168B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.06% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.45% (3,864B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.45% (3,864B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.22% (1,920B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.20% (1,888B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.20% (1,888B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.02% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  8     42,032,894          151,160          112,864        38,296            0
+  9     47,264,909          149,976          116,216        33,760            0
+ 10     50,479,159          229,416          181,488        47,928            0
+79.11% (181,488B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.11% (105,792B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.11% (105,792B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   ->46.11% (105,792B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|     
+->14.54% (33,360B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->14.54% (33,360B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->13.20% (30,272B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->13.16% (30,184B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->13.16% (30,184B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.04% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.59% (8,232B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.59% (8,232B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.66% (3,808B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.65% (3,776B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.65% (3,776B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.01% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 11     55,246,634          229,576          179,624        49,952            0
+ 12     59,900,779          221,784          176,320        45,464            0
+ 13     66,794,790          272,464          219,140        53,324            0
+ 14     70,660,571          317,544          252,576        64,968            0
+ 15     74,117,059          380,504          300,260        80,244            0
+78.91% (300,260B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.81% (178,112B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.81% (178,112B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   ->46.81% (178,112B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|     
+->15.39% (58,548B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.39% (58,548B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->11.86% (45,144B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->11.84% (45,056B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->11.84% (45,056B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.02% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.23% (12,288B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.23% (12,288B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.61% (6,144B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.61% (6,112B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.61% (6,112B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.01% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 16     81,261,108          378,800          297,388        81,412            0
+78.51% (297,388B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->45.94% (174,016B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->45.94% (174,016B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   ->45.94% (174,016B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|     
+->15.78% (59,772B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.78% (59,772B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->11.92% (45,144B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->11.89% (45,056B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->11.89% (45,056B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.02% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.24% (12,288B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.24% (12,288B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.62% (6,144B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.61% (6,112B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.61% (6,112B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.01% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 17     86,074,476          374,080          295,036        79,044            0
+ 18     92,755,509          359,800          287,896        71,904            0
+ 19     99,948,575          394,056          314,024        80,032            0
+ 20    104,975,685          412,352          330,788        81,564            0
+ 21    108,462,742          442,016          354,580        87,436            0
+ 22    113,615,912          507,480          403,992       103,488            0
+ 23    118,147,336          500,168          400,344        99,824            0
+ 24    121,124,833          531,648          420,228       111,420            0
+ 25    126,356,833          523,920          416,388       107,532            0
+ 26    130,760,566          560,504          448,688       111,816            0
+80.05% (448,688B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.78% (273,408B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->48.78% (273,408B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   ->48.78% (273,408B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|     
+->14.00% (78,480B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->14.00% (78,480B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->12.31% (68,992B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->12.29% (68,904B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->12.29% (68,904B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.02% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.35% (18,792B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.35% (18,792B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.60% (8,992B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.60% (8,960B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.60% (8,960B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 27    136,719,707          703,840          555,924       147,916            0
+78.98% (555,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.58% (334,912B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->47.58% (334,912B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   ->47.58% (334,912B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|     
+->15.56% (109,524B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.56% (109,524B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->11.30% (79,552B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->11.29% (79,464B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->11.29% (79,464B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.08% (21,672B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.08% (21,672B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.45% (10,240B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.45% (10,208B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.45% (10,208B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 28    141,503,187          750,472          581,276       169,196            0
+77.45% (581,276B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->45.17% (339,008B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->45.17% (339,008B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   ->45.17% (339,008B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|     
+->17.41% (130,668B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.41% (130,668B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->10.61% (79,640B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->10.60% (79,552B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->10.60% (79,552B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.89% (21,696B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.89% (21,696B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.36% (10,240B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.36% (10,208B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.36% (10,208B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 29    145,046,124          772,040          594,156       177,884            0
+ 30    148,829,239          810,216          621,436       188,780            0
+ 31    154,320,890          835,872          638,352       197,520            0
+76.37% (638,352B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->44.00% (367,744B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->43.99% (367,680B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->43.99% (367,680B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->19.01% (158,928B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->19.01% (158,928B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.54% (79,728B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.53% (79,640B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.53% (79,640B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.60% (21,720B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.60% (21,720B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.22% (10,208B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.22% (10,208B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.22% (10,208B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 32    159,807,028          834,672          637,752       196,920            0
+ 33    163,506,500          833,856          637,344       196,512            0
+ 34    167,118,116          833,040          636,936       196,104            0
+ 35    170,846,420          832,176          636,504       195,672            0
+ 36    174,476,228          831,312          636,072       195,240            0
+ 37    178,200,836          830,384          635,616       194,768            0
+ 38    183,674,180          828,992          634,920       194,072            0
+ 39    187,299,940          828,032          634,440       193,592            0
+ 40    192,765,354          826,568          633,708       192,860            0
+ 41    198,249,314          824,984          632,916       192,068            0
+ 42    201,892,519          823,856          632,352       191,504            0
+ 43    207,358,444          822,056          631,452       190,604            0
+ 44    212,791,356          820,280          630,564       189,716            0
+ 45    216,435,432          818,864          629,856       189,008            0
+ 46    223,644,908          815,840          628,344       187,496            0
+ 47    229,042,311          813,112          626,988       186,124            0
+ 48    236,240,257          808,816          624,840       183,976            0
+ 49    243,418,015          802,248          621,632       180,616            0
+ 50    246,397,033          795,984          618,500       177,484            0
+77.70% (618,500B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.21% (367,808B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.20% (367,744B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.20% (367,744B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.45% (138,900B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.45% (138,900B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->10.03% (79,816B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->10.02% (79,728B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->10.02% (79,728B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.73% (21,744B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.73% (21,744B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.28% (10,208B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.28% (10,208B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.28% (10,208B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 51    249,379,637          811,696          632,488       179,208            0
+ 52    252,044,225          862,320          669,564       192,756            0
+77.65% (669,564B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.47% (400,704B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.46% (400,640B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.46% (400,640B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.71% (152,700B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.71% (152,700B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.61% (82,896B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.60% (82,808B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.60% (82,808B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.62% (22,584B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.62% (22,584B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.24% (10,656B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.24% (10,656B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.24% (10,656B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 53    255,040,206          869,200          670,952       198,248            0
+ 54    258,031,963          867,144          669,932       197,212            0
+ 55    261,018,784          864,728          668,732       195,996            0
+ 56    264,000,109          861,680          667,208       194,472            0
+ 57    266,987,572          857,672          665,204       192,468            0
+ 58    269,966,831          850,112          661,424       188,688            0
+ 59    272,837,160          872,944          680,580       192,364            0
+77.96% (680,580B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.02% (410,496B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->47.02% (410,432B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->47.02% (410,432B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.32% (151,236B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.32% (151,236B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.72% (84,832B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.71% (84,744B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.71% (84,744B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.65% (23,112B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.65% (23,112B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.25% (10,880B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.25% (10,880B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.25% (10,880B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 60    274,122,957          881,720          687,156       194,564            0
+77.93% (687,156B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.94% (413,888B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.93% (413,824B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.93% (413,824B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.33% (152,820B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.33% (152,820B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.76% (86,064B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.75% (85,976B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.75% (85,976B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.66% (23,448B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.66% (23,448B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.24% (10,912B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.24% (10,912B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.24% (10,912B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61    274,242,834          890,696          694,204       196,492            0
+77.94% (694,204B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.93% (417,984B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.92% (417,920B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.92% (417,920B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.31% (154,188B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.31% (154,188B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.79% (87,208B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.78% (87,120B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.78% (87,120B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.67% (23,760B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.67% (23,760B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.24% (11,040B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.24% (11,040B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.24% (11,040B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 62    274,368,972          909,144          708,028       201,116            0
+77.88% (708,028B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.99% (427,200B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.98% (427,136B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.98% (427,136B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.47% (158,796B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.47% (158,796B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.59% (87,208B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.58% (87,120B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.58% (87,120B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.61% (23,760B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.61% (23,760B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.21% (11,040B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.21% (11,040B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.21% (11,040B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 63    274,776,653          919,848          714,424       205,424            0
+77.67% (714,424B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.67% (429,248B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.66% (429,184B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.66% (429,184B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.72% (163,032B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.72% (163,032B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.49% (87,296B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.48% (87,208B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.48% (87,208B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.59% (23,784B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.59% (23,784B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.20% (11,040B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.20% (11,040B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.20% (11,040B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 64    274,860,714          932,152          723,640       208,512            0
+77.63% (723,640B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.71% (435,392B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.70% (435,328B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.70% (435,328B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.82% (166,104B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.82% (166,104B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.36% (87,296B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.36% (87,208B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.36% (87,208B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.55% (23,784B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.55% (23,784B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.18% (11,040B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.18% (11,040B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.18% (11,040B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 65    277,844,351          937,696          724,392       213,304            0
+ 66    280,825,149          934,864          722,976       211,888            0
+ 67    283,806,192          931,920          721,512       210,408            0
+ 68    286,792,466          926,952          719,028       207,924            0
+ 69    289,770,120          938,520          731,468       207,052            0
+ 70    290,195,065          941,624          734,368       207,256            0
+77.99% (734,368B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.91% (441,728B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.90% (441,664B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.90% (441,664B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.20% (161,952B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.20% (161,952B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.92% (93,456B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.92% (93,368B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.92% (93,368B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.70% (25,464B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.70% (25,464B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.25% (11,744B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.25% (11,744B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.25% (11,744B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 71    290,546,237          953,264          743,764       209,500            0
+78.02% (743,764B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.00% (448,000B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.99% (447,936B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.99% (447,936B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.17% (163,668B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.17% (163,668B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->09.91% (94,512B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->09.91% (94,424B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->09.91% (94,424B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.70% (25,752B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.70% (25,752B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.24% (11,808B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.24% (11,808B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.24% (11,808B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 72    291,262,587          962,952          751,244       211,708            0
+78.01% (751,244B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.88% (451,392B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.87% (451,328B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.87% (451,328B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.12% (164,844B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->17.12% (164,844B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->10.03% (96,624B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->10.03% (96,536B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->10.03% (96,536B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.73% (26,328B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.73% (26,328B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.25% (12,032B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.25% (12,032B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.25% (12,032B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 73    292,118,814          972,712          760,604       212,108            0
+78.19% (760,604B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.05% (457,664B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->47.04% (457,600B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->47.04% (457,600B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->16.83% (163,692B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->16.83% (163,692B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->10.25% (99,704B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->10.24% (99,616B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->10.24% (99,616B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.79% (27,168B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.79% (27,168B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.27% (12,352B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.27% (12,352B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.27% (12,352B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 74    292,495,153          983,056          769,220       213,836            0
+78.25% (769,220B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.01% (462,144B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->47.00% (462,080B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->47.00% (462,080B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->16.70% (164,196B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->16.70% (164,196B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->10.40% (102,256B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->10.39% (102,168B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->10.39% (102,168B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.83% (27,864B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.83% (27,864B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.30% (12,736B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.30% (12,736B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.30% (12,736B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 75    292,934,548          993,016          777,928       215,088            0
+78.34% (777,928B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.87% (465,472B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.87% (465,408B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.87% (465,408B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->16.47% (163,560B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->16.47% (163,560B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->10.72% (106,480B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->10.71% (106,392B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->10.71% (106,392B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.92% (29,016B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.92% (29,016B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.35% (13,376B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.35% (13,376B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.35% (13,376B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 76    293,182,524        1,003,216          786,448       216,768            0
+78.39% (786,448B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.73% (468,800B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.72% (468,736B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.72% (468,736B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->16.32% (163,680B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->16.32% (163,680B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->10.96% (109,912B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->10.95% (109,824B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->10.95% (109,824B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.99% (29,952B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->02.99% (29,952B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.40% (14,080B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.40% (14,080B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.40% (14,080B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 77    293,508,111        1,013,328          795,040       218,288            0
+78.46% (795,040B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.69% (473,152B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.69% (473,088B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.69% (473,088B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->16.17% (163,824B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->16.17% (163,824B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->11.14% (112,904B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->11.13% (112,816B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->11.13% (112,816B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.04% (30,768B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.04% (30,768B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.42% (14,368B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.42% (14,368B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.42% (14,368B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 78    293,717,991        1,023,536          803,360       220,176            0
+78.49% (803,360B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.50% (475,904B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.49% (475,840B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.49% (475,840B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->16.03% (164,064B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->16.03% (164,064B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->11.38% (116,512B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->11.37% (116,424B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->11.37% (116,424B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.10% (31,752B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.10% (31,752B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.48% (15,104B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.48% (15,104B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.48% (15,104B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 79    293,971,709        1,033,880          812,100       221,780            0
+78.55% (812,100B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.33% (479,040B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.33% (478,976B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.33% (478,976B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->15.84% (163,812B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.84% (163,812B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->11.66% (120,560B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->11.65% (120,472B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->11.65% (120,472B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.18% (32,856B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.18% (32,856B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.53% (15,808B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.53% (15,808B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.53% (15,808B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 80    294,632,217        1,047,232          822,872       224,360            0
+78.58% (822,872B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.39% (485,760B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.38% (485,696B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.38% (485,696B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->15.81% (165,576B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.81% (165,576B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->11.67% (122,232B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->11.66% (122,144B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->11.66% (122,144B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.18% (33,312B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.18% (33,312B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.52% (15,968B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.52% (15,968B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.52% (15,968B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 81    294,904,640        1,059,488          831,052       228,436            0
+78.44% (831,052B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.24% (489,856B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.23% (489,792B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.23% (489,792B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->16.00% (169,548B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->16.00% (169,548B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->11.55% (122,320B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->11.54% (122,232B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->11.54% (122,232B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.15% (33,336B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.15% (33,336B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.51% (15,968B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.51% (15,968B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.51% (15,968B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 82    297,882,323        1,064,624          836,624       228,000            0
+ 83    297,991,170        1,070,088          841,112       228,976            0
+78.60% (841,112B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.27% (495,168B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.27% (495,104B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.27% (495,104B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->15.72% (168,264B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.72% (168,264B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->11.82% (126,456B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->11.81% (126,368B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->11.81% (126,368B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.22% (34,464B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.22% (34,464B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.56% (16,736B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.56% (16,736B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.56% (16,736B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 84    298,351,671        1,080,840          850,272       230,568            0
+78.67% (850,272B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.18% (499,136B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.17% (499,072B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.17% (499,072B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->15.56% (168,192B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.56% (168,192B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->12.03% (130,064B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->12.03% (129,976B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->12.03% (129,976B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.28% (35,448B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.28% (35,448B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.61% (17,408B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.61% (17,408B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.61% (17,408B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 85    298,610,499        1,091,864          859,420       232,444            0
+78.71% (859,420B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.15% (503,936B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.15% (503,872B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.15% (503,872B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->15.46% (168,780B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.46% (168,780B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->12.16% (132,792B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->12.15% (132,704B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->12.15% (132,704B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.31% (36,192B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.31% (36,192B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.62% (17,696B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.62% (17,696B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.62% (17,696B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 86    299,357,129        1,102,920          869,064       233,856            0
+78.80% (869,064B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.13% (508,736B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.12% (508,672B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.12% (508,672B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->15.28% (168,504B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.28% (168,504B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->12.38% (136,488B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->12.37% (136,400B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->12.37% (136,400B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.37% (37,200B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.37% (37,200B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.64% (18,112B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.64% (18,112B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.64% (18,112B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 87    299,640,136        1,115,712          879,324       236,388            0
+78.81% (879,324B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.13% (514,624B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.12% (514,560B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.12% (514,560B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->15.24% (170,076B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.24% (170,076B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->12.41% (138,512B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->12.41% (138,424B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->12.41% (138,424B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.38% (37,752B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.38% (37,752B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.64% (18,336B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.64% (18,336B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.64% (18,336B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 88    299,930,315        1,126,928          887,520       239,408            0
+78.76% (887,520B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.12% (519,744B) 0x40185D: cdsl_dyn_array_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->46.11% (519,680B) 0x40150F: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->46.11% (519,680B) 0x401232: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->15.36% (173,040B) 0x401343: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->15.36% (173,040B) 0x401204: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->12.30% (138,600B) 0x4016F1: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->12.29% (138,512B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->12.29% (138,512B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.01% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.35% (37,776B) 0x401422: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->03.35% (37,776B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+|   
+->01.63% (18,336B) 0x401720: cdsl_dyn_array_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| ->01.63% (18,336B) 0x40145B: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| | ->01.63% (18,336B) 0x40121B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_DYNARRcl_DYNARRpk)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+

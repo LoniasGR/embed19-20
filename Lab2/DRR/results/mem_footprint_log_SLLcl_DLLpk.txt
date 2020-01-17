@@ -1,0 +1,442 @@
+--------------------------------------------------------------------------------
+Command:            ./drr_SLLcl_DLLpk
+Massif arguments:   --massif-out-file=./test.out
+ms_print arguments: ./test.out
+--------------------------------------------------------------------------------
+
+
+    KB
+980.3^                                                                       #
+     |                                                                      @#
+     |                                                                    @:@#
+     |                                              @                   ::@:@#
+     |                                              @::               ::: @:@#
+     |                                            @@@:     :    :: :::: : @:@#
+     |                                           @@ @: :   :::::: :: :: : @:@#
+     |                                           @@ @: :   ::: :: :: :: : @:@#
+     |                                          @@@ @: ::::::: :: :: :: : @:@#
+     |                                          @@@ @: ::: ::: :: :: :: : @:@#
+     |                                         :@@@ @: ::: ::: :: :: :: : @:@#
+     |                                  @@  ::@:@@@ @: ::: ::: :: :: :: : @:@#
+     |                                ::@ ::: @:@@@ @: ::: ::: :: :: :: : @:@#
+     |                      @  :   :::: @ : : @:@@@ @: ::: ::: :: :: :: : @:@#
+     |                      @::::::: :: @ : : @:@@@ @: ::: ::: :: :: :: : @:@#
+     |                   @@:@: :: :: :: @ : : @:@@@ @: ::: ::: :: :: :: : @:@#
+     |               ::::@ :@: :: :: :: @ : : @:@@@ @: ::: ::: :: :: :: : @:@#
+     |       ::  ::::::: @ :@: :: :: :: @ : : @:@@@ @: ::: ::: :: :: :: : @:@#
+     |   ::: ::::: : ::: @ :@: :: :: :: @ : : @:@@@ @: ::: ::: :: :: :: : @:@#
+     |   : ::::: : : ::: @ :@: :: :: :: @ : : @:@@@ @: ::: ::: :: :: :: : @:@#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   34.15
+
+Number of snapshots: 57
+ Detailed snapshots: [14, 16, 24, 28, 30, 31, 32, 33, 48, 52, 54, 55, 56 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        905,187           37,144           28,636         8,508            0
+  2      1,866,340          116,320           77,596        38,724            0
+  3      2,561,209          132,864           85,996        46,868            0
+  4      2,958,226           81,024           56,116        24,908            0
+  5      3,649,186          190,000          113,796        76,204            0
+  6      4,168,152          163,880          100,272        63,608            0
+  7      4,690,019          110,184           70,808        39,376            0
+  8      5,508,596          139,512           92,524        46,988            0
+  9      5,958,057          160,048          106,784        53,264            0
+ 10      6,503,514          185,048          122,768        62,280            0
+ 11      7,469,542          211,672          138,068        73,604            0
+ 12      8,014,069          235,384          153,776        81,608            0
+ 13      8,845,592          229,120          150,224        78,896            0
+ 14      9,758,561          259,672          174,676        84,996            0
+67.27% (174,676B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->40.93% (106,272B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->40.93% (106,272B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->40.93% (106,272B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->40.93% (106,272B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->13.77% (35,748B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->13.77% (35,748B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->04.90% (12,720B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->04.59% (11,928B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->04.59% (11,928B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.31% (792B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->04.55% (11,808B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->04.55% (11,808B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->03.03% (7,872B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.03% (7,872B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->03.03% (7,872B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.10% (256B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 15     10,596,624          271,416          181,728        89,688            0
+ 16     11,312,988          395,400          250,648       144,752            0
+63.39% (250,648B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->28.02% (110,808B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->28.02% (110,808B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->28.02% (110,808B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->28.02% (110,808B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->15.75% (62,280B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->15.75% (62,280B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->14.37% (56,808B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->14.17% (56,016B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->14.17% (56,016B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.20% (792B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.11% (12,312B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.11% (12,312B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.08% (8,208B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.08% (8,208B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.08% (8,208B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.06% (232B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 17     11,813,784          314,768          204,316       110,452            0
+ 18     12,514,373          373,560          235,636       137,924            0
+ 19     13,136,248          339,344          215,360       123,984            0
+ 20     13,998,569          346,232          219,384       126,848            0
+ 21     14,861,308          377,752          238,216       139,536            0
+ 22     15,551,297          372,472          239,012       133,460            0
+ 23     16,408,763          441,464          278,900       162,564            0
+ 24     17,147,385          480,000          297,340       182,660            0
+61.95% (297,340B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->29.57% (141,912B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->29.57% (141,912B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->29.57% (141,912B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->29.57% (141,912B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->17.48% (83,916B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->17.48% (83,916B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->09.38% (45,000B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->09.16% (43,968B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->09.16% (43,968B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.21% (1,032B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.29% (15,768B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.29% (15,768B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.19% (10,512B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.19% (10,512B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.19% (10,512B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.05% (232B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 25     18,009,660          443,784          275,576       168,208            0
+ 26     18,354,894          438,976          275,212       163,764            0
+ 27     19,044,722          465,704          296,036       169,668            0
+ 28     19,912,523          501,320          320,440       180,880            0
+63.92% (320,440B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->35.93% (180,144B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->35.93% (180,144B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->35.93% (180,144B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->35.93% (180,144B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->16.47% (82,560B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->16.47% (82,560B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->04.82% (24,144B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->04.56% (22,848B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->04.56% (22,848B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.26% (1,296B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.99% (20,016B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.99% (20,016B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.66% (13,344B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.66% (13,344B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.66% (13,344B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.05% (232B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 29     20,410,866          511,592          330,880       180,712            0
+ 30     21,174,279          626,536          396,644       229,892            0
+63.31% (396,644B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->31.17% (195,264B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->31.17% (195,264B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->31.17% (195,264B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->31.17% (195,264B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->16.36% (102,516B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->16.36% (102,516B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->09.97% (62,472B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->09.74% (61,032B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->09.74% (61,032B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.23% (1,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.46% (21,696B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.46% (21,696B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.31% (14,464B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.31% (14,464B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.31% (14,464B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.04% (232B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 31     21,736,577          711,840          444,164       267,676            0
+62.40% (444,164B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->27.43% (195,264B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->27.43% (195,264B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->27.43% (195,264B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->27.43% (195,264B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->16.71% (118,956B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->16.71% (118,956B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->13.14% (93,552B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->12.94% (92,112B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->12.94% (92,112B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.20% (1,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.05% (21,696B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.05% (21,696B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.03% (14,464B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.03% (14,464B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.03% (14,464B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.03% (232B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 32     22,189,256          781,744          483,276       298,468            0
+61.82% (483,276B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->25.01% (195,480B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->25.01% (195,480B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->25.01% (195,480B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->25.01% (195,480B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->16.92% (132,300B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->16.92% (132,300B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->15.23% (119,040B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->15.04% (117,576B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->15.04% (117,576B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.19% (1,464B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.78% (21,720B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.78% (21,720B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->01.85% (14,480B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->01.85% (14,480B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->01.85% (14,480B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.03% (256B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 33     22,889,680          872,960          533,476       339,484            0
+61.11% (533,476B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->22.42% (195,696B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->22.42% (195,696B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->22.42% (195,696B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->22.42% (195,696B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->17.27% (150,768B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->17.11% (149,328B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->17.11% (149,328B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.16% (1,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.24% (150,540B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->17.24% (150,540B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.49% (21,744B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.49% (21,744B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->01.66% (14,496B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->01.66% (14,496B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->01.66% (14,496B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.03% (232B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 34     23,868,770          823,392          502,420       320,972            0
+ 35     24,469,468          733,312          450,148       283,164            0
+ 36     25,070,144          639,280          396,128       243,152            0
+ 37     25,672,498          633,744          394,772       238,972            0
+ 38     26,573,779          764,872          454,324       310,548            0
+ 39     27,174,548          710,152          425,404       284,748            0
+ 40     27,775,285          711,744          427,580       284,164            0
+ 41     28,375,865          711,160          425,392       285,768            0
+ 42     28,976,633          788,312          462,912       325,400            0
+ 43     29,879,757          745,008          440,204       304,804            0
+ 44     30,780,854          777,904          463,296       314,608            0
+ 45     31,381,498          789,704          471,852       317,852            0
+ 46     31,982,229          819,488          492,272       327,216            0
+ 47     32,883,388          860,600          526,540       334,060            0
+ 48     33,833,544          943,232          580,016       363,216            0
+61.49% (580,016B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->31.83% (300,240B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->31.83% (300,240B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->31.83% (300,240B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->31.83% (300,240B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->18.36% (173,184B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->18.36% (173,184B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->05.38% (50,736B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->05.16% (48,696B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->05.16% (48,696B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.22% (2,040B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.54% (33,360B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.54% (33,360B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.36% (22,240B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.36% (22,240B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.36% (22,240B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.03% (256B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 49     34,133,926          908,784          560,896       347,888            0
+ 50     34,479,174          924,000          573,580       350,420            0
+ 51     34,824,427          939,752          585,648       354,104            0
+ 52     35,007,758          958,968          598,288       360,680            0
+62.39% (598,288B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.99% (325,944B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->33.99% (325,944B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->33.99% (325,944B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->33.99% (325,944B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->17.81% (170,832B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->17.81% (170,832B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->04.26% (40,896B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.97% (38,040B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->03.97% (38,040B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.30% (2,856B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.78% (36,216B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.78% (36,216B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.52% (24,144B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.52% (24,144B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.52% (24,144B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.03% (256B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 53     35,353,034          960,728          602,768       357,960            0
+ 54     35,462,856          969,584          608,816       360,768            0
+62.79% (608,816B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.78% (337,176B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->34.78% (337,176B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->34.78% (337,176B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->34.78% (337,176B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->17.49% (169,608B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->17.49% (169,608B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->04.06% (39,336B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.76% (36,408B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->03.76% (36,408B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.30% (2,928B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.86% (37,464B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.86% (37,464B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.58% (24,976B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.58% (24,976B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.58% (24,976B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.03% (256B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 55     35,684,491          987,120          619,792       367,328            0
+62.79% (619,792B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.46% (340,200B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->34.46% (340,200B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->34.46% (340,200B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->34.46% (340,200B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->17.44% (172,200B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->17.44% (172,200B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->04.47% (44,136B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->04.17% (41,184B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->04.17% (41,184B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.30% (2,952B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.83% (37,800B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.83% (37,800B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.55% (25,200B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.55% (25,200B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.55% (25,200B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.03% (256B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 56     35,807,077        1,003,848          629,056       374,792            0
+62.66% (629,056B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.89% (340,200B) 0x402D99: cdsl_deque_list_lock_based_pthread_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->33.89% (340,200B) 0x402EA3: cdsl_dll_init (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->33.89% (340,200B) 0x40159D: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     ->33.89% (340,200B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|       
+->17.48% (175,488B) 0x40147C: get_next_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->17.48% (175,488B) 0x401334: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->04.99% (50,136B) 0x4040FF: cdsl_deque_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->04.70% (47,208B) 0x401651: insert_packet (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| | ->04.70% (47,208B) 0x401362: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| |   
+| ->00.29% (2,928B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.77% (37,800B) 0x401564: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->03.77% (37,800B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   
+->02.51% (25,200B) 0x40196C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+| ->02.51% (25,200B) 0x4015C8: find_node (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|   ->02.51% (25,200B) 0x40134B: main (in /home/lavdelas/projects/embed19-20/Lab2/DRR/drr_SLLcl_DLLpk)
+|     
+->00.02% (232B) in 1+ places, all below ms_print's threshold (01.00%)
+

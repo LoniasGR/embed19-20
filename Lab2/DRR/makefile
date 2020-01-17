@@ -28,7 +28,7 @@ drr_SLLcl_DYNARRpk: drr.c
 	$(CC) $^ -o $@ -DSLL_CL -DDYN_ARR_PK $(CFLAGS)
 
 drr_DLLcl_DYNARRpk: drr.c
-	$(CC) $^ -o $@ -DDLL_CL -D_DYN_ARR_PK $(CFLAGS)
+	$(CC) $^ -o $@ -DDLL_CL -DDYN_ARR_PK $(CFLAGS)
 	
 .PHONY : clean
 
