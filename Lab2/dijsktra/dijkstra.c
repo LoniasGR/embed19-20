@@ -52,7 +52,6 @@ void print_path (NODE *rgnNodes, int chNode)
 void enqueue (int iNode, int iDist, int iPrev)
 {
   QITEM *qNew = (QITEM *) malloc(sizeof(QITEM));
-  QITEM *qLast = qHead;
   
   if (!qNew) 
     {
@@ -62,7 +61,6 @@ void enqueue (int iNode, int iDist, int iPrev)
   qNew->iNode = iNode;
   qNew->iDist = iDist;
   qNew->iPrev = iPrev;
-  qNew->qNext = NULL;
   
   qHead->enqueue(0, qHead, (void*)qNew);
 
@@ -73,11 +71,22 @@ void enqueue (int iNode, int iDist, int iPrev)
 
 void dequeue (int *piNode, int *piDist, int *piPrev)
 {
-      *piNode = qHead->iNode;
-      *piDist = qHead->iDist;
-      *piPrev = qHead->iPrev;
-     	qHead->dequeue(0, (qHead));
-      g_qCount--;
+    #if defined (SLL)
+      iterator_cdsl_sll it;
+    #elif defined (DLL)
+      iterator_cdsl_dll it;
+    #else
+      iterator_cdsl_dyn_array it;
+
+	  it = qHead->iter_begin(qHead);
+    node = (QITEM*)(qHead->iter_deref(qHead, it));
+
+
+    *piNode = node->iNode;
+    *piDist = node->iDist;
+    *piPrev = node->iPrev;
+    qHead->dequeue(0, (qHead));
+    g_qCount--;
 }
 
 
