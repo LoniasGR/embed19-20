@@ -1,0 +1,148 @@
+\documentclass{article}
+
+    % Input language encoding
+    \usepackage[utf8]{inputenc}
+   
+    % Output languages
+    \usepackage[english, greek]{babel}
+    \usepackage{alphabeta}
+    
+    % Fonts
+    \usepackage[T1,LGR]{fontenc}
+    \usepackage{lmodern}
+
+    % Images
+    \usepackage{graphicx}
+    \usepackage{float}
+    \usepackage{caption}
+    \usepackage{subcaption}
+
+    % Math
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+
+    % Paragraph Formatting
+    \usepackage{parskip}
+
+    % Code
+    \usepackage{listings}
+    \usepackage{fancyvrb}
+
+    % Different Enumerations
+    \usepackage{enumitem}
+
+    % Trees
+    \usepackage{qtree}
+
+    % Other Drawings
+    \usepackage{tikz}
+    \usetikzlibrary{shapes,backgrounds}
+
+    % Links
+    \usepackage{hyperref}
+
+    % Color
+    \usepackage{color}
+   
+    % Setup
+
+    % For hyperlinks
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue,
+        filecolor=magenta,      
+        urlcolor=cyan,
+    }
+
+    \urlstyle{same}
+    
+    % For code
+    \definecolor{codegreen}{rgb}{0,0.6,0}
+    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+     
+    \lstdefinestyle{mystyle}{
+        backgroundcolor=\color{backcolour},   
+        commentstyle=\color{codegreen},
+        keywordstyle=\color{magenta},
+        numberstyle=\tiny\color{codegray},
+        stringstyle=\color{codepurple},
+        basicstyle=\fontsize{8}{11}\selectfont\ttfamily,
+        breakatwhitespace=false,         
+        breaklines=true,                 
+        captionpos=b,                    
+        keepspaces=true,                 
+        numbers=left,                    
+        numbersep=5pt,                  
+        showspaces=false,                
+        showstringspaces=false,
+        showtabs=false,                  
+        tabsize=4
+    }
+
+    \lstset{style=mystyle}
+
+    % For math
+    \DeclareMathSizes{10}{10}{10}{10}
+    \setlength{\parindent}{0cm}
+
+    % Foreign Language macro
+    \newcommand{\english}[1]{\foreignlanguage{english}{{#1}}}
+
+    \title{2η Εργαστηριακή Ασκήσεων \\
+        Σχεδιασμός Ενσωματωμένων Συστημάτων}
+\begin{document}
+
+\pagenumbering{arabic}
+\date{}
+\author{Λεωνίδας Αβδελάς $|$ ΑΜ: 03113182}
+
+\maketitle
+\newpage
+
+\section*{Άσκηση 1: Βελτιστοποίηση δυναμικών δομών δεδομένων \\ του αλγορίθμου \english{DRR}}
+
+Οι συνδιασμοί των υλοιποιήσεων δομών δεδομένω και τα αποτελέσματα φαίνονται στον πίνακα:
+
+\begin{otherlanguage}{english}
+    \begin{center}
+        \begin{tabular}{|p{100pt}|c|c|}\hline
+            & Memory accesses & Memory footprint \\ \hline
+            Nodes: SLL, \newline  Package: SLL & 70820207 & 798.8KB \\ \hline
+            Nodes: DLL, \newline Package: SLL & 70832593 & 823.0KB \\ \hline
+            Nodes: DLL, \newline Package: DLL & 71471605 & 983.3KB \\ \hline
+            Nodes: SLL, \newline Package: DLL & 71459376 & 980.3KB \\ \hline
+            Nodes: DYN ARR, \newline Package: DLL & 71966451 & 928.5KB \\ \hline
+            Nodes: DYN ARR, \newline Package: SLL & 71288307 & 760.2KB \\ \hline
+            Nodes: DYN ARR, \newline Package: DYN ARR & 472028393 & 1.075MB \\ \hline
+            Nodes: SLL, \newline Package: DYN ARR & 471333547 & 1.111MB \\ \hline
+            Nodes: DLL, \newline Package: DYN ARR & 471350334 & 1.128MB \\ \hline
+       \end{tabular}
+    \end{center}
+\end{otherlanguage}
+
+Οπως βλέπουμε, ο συνδιασμός υλοποιήσεων που έχει τις \textbf{λιγότερες προσβάσεις} στην μνήμη είναι με τη χρήση \textbf{\english{SLL} και για τους κόμβους και για τα πακέτα}.
+
+Για το \english{\textbf{memory footprint}} η καλύτερη επιλογή είναι \textbf{δυναμικός πίνακας για τους κόμβους και απλή λίστα για τα πακέτα}.
+
+\section*{Άσκηση 2: Βελτιστοποίηση δυναμικών δομών δεδομένων \\ του αλγορίθμου \english{Dijkstra}}
+
+Τα αποτελέσματα για τις διαφορετικές δομές δεδομένων φαίνονται παρακάτω:
+
+\begin{otherlanguage}{english}
+    \begin{center}
+        \begin{tabular}{|p{100pt}|c|c|}\hline
+            & Memory accesses & Memory footprint \\ \hline
+            SLL & 102900357 & 359.2KB \\ \hline
+            DLL & 103081674 & 473.7KB \\ \hline
+            Dynamic Array & 150559543 & 363.7KB \\ \hline
+       \end{tabular}
+    \end{center}
+\end{otherlanguage}
+
+Οπως βλέπουμε, η υλοποίηση που έχει τις \textbf{λιγότερες προσβάσεις} στην μνήμη είναι η  \english{\textbf{SLL}}.
+
+Για το \english{\textbf{memory footprint}} η καλύτερη επιλογή είναι ξανά η \textbf{απλή λίστα}.
+
+\end{document}
