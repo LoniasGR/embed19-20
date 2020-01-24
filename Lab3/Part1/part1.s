@@ -2,20 +2,20 @@
 .global main
 
 read_number:
-    push r7
+    push {r7}
     mov r0, #0 /* first argument -> stdin */
     mov r7, #3 /* number of read syscall */
     swi 0
-    pop r7
+    pop {r7}
     mov pc, lr
 
 print_out_str:
 /* we will use syscalls to interact with the user */
-    push r7
+    push {r7}
     mov r0, #1 /* first argument -> stdout */
     mov r7, #4 /* number of system call */
     swi 0
-    pop r7
+    pop {r7}
     mov pc, lr
 
 main:
