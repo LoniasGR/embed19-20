@@ -25,6 +25,9 @@ dijkstra_SLL
 dijkstra_DLL
 dijkstra_DYNARR
 
+# Lab 3
+host
+
 # Latex intermediate files
 *.gz
 
