@@ -1,0 +1,148 @@
+\documentclass{article}
+
+    % Input language encoding
+    \usepackage[utf8]{inputenc}
+   
+    % Output languages
+    \usepackage[english, greek]{babel}
+    \usepackage{alphabeta}
+    
+    % Fonts
+    \usepackage[T1,LGR]{fontenc}
+    \usepackage{lmodern}
+
+    % Images
+    \usepackage{graphicx}
+    \usepackage{float}
+    \usepackage{caption}
+    \usepackage{subcaption}
+
+    % Math
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+
+    % Paragraph Formatting
+    \usepackage{parskip}
+
+    % Code
+    \usepackage{listings}
+    \usepackage{fancyvrb}
+
+    % Different Enumerations
+    \usepackage{enumitem}
+
+    % Trees
+    \usepackage{qtree}
+
+    % Other Drawings
+    \usepackage{tikz}
+    \usetikzlibrary{shapes,backgrounds}
+
+    % Links
+    \usepackage{hyperref}
+
+    % Color
+    \usepackage{color}
+   
+    % Setup
+
+    % For hyperlinks
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue,
+        filecolor=magenta,      
+        urlcolor=cyan,
+    }
+
+    \urlstyle{same}
+    
+    % For code
+    \definecolor{codegreen}{rgb}{0,0.6,0}
+    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+     
+    \lstdefinestyle{mystyle}{
+        backgroundcolor=\color{backcolour},   
+        commentstyle=\color{codegreen},
+        keywordstyle=\color{magenta},
+        numberstyle=\tiny\color{codegray},
+        stringstyle=\color{codepurple},
+        basicstyle=\fontsize{8}{11}\selectfont\ttfamily,
+        breakatwhitespace=false,         
+        breaklines=true,                 
+        captionpos=b,                    
+        keepspaces=true,                 
+        numbers=left,                    
+        numbersep=5pt,                  
+        showspaces=false,                
+        showstringspaces=false,
+        showtabs=false,                  
+        tabsize=4
+    }
+
+    \lstset{style=mystyle}
+
+    % For math
+    \DeclareMathSizes{10}{10}{10}{10}
+    \setlength{\parindent}{0cm}
+
+    % Foreign Language macro
+    \newcommand{\english}[1]{\foreignlanguage{english}{{#1}}}
+
+    \title{3η Εργαστηριακή Ασκήσεων \\
+        Σχεδιασμός Ενσωματωμένων Συστημάτων}
+\begin{document}
+
+\pagenumbering{arabic}
+\date{}
+\author{Λεωνίδας Αβδελάς $|$ ΑΜ: 03113182}
+
+\maketitle
+\newpage
+
+\section*{Ερώτημα 1ο: \\ Μετατροπή εισόδου από τερματικό}
+
+Για την άσκηση αυτή, χρησιμοποιήσαμε \english{system calls}, αφού ήταν αρκετά πιο εύκολα στην χρήση. Προσπαθήσουμε να σπάσουμε το πρόγραμμα σε διακριτά κομμάτια για να είναι πιο εύκολα στην διαχείρηση. Το πρόγραμμα ξεκινάει γράφοντας στο \english{stdout} και διαβάζοντας την είσοδο του χρήστη. Έπειτα κάνει τα παρακάτω:
+
+\begin{itemize}
+    \item Ελέγχει αν το μήκος της εισόδου είναι 2 (ένας χαρακτήρας και το \english{EOL}). Αν είναι ελέγχει αν ο χαρακτήρας είναι \english{q} ή \english{Q}. Αν είναι καλεί το \english{system call, exit} για να τερματίσει.
+    \item Αν δεν είναι περνάει στην συνάρτηση \english{reformat string}. 
+\end{itemize}
+
+Η συνάρτηση \english{reformat string} δέχεται ως όρισμα στον \english{\textbf{r5}} το μήκος της συμβολοσειράς. Αυτό δεν είναι σύμφωνο με τα γνωστά \english{conventions} για συναρτήσεις σε \english{ARM}, αλλά μπορεί εύκολα να αλλάξει αν χρειαστεί. 
+
+Η συνάρτηση διατρέχει τους χαρακτήρες που υπάρχουν στην θέση μνήμης του \english{\textbf{r1}}, μέχρι να είναι το \english{\textbf{r5}} ίσο με 0. Όσο το κάνει αυτό, φορτώνει το στοιχείο που είναι στην θέση μνήμης \english{\textbf{r1}} στον \english{\textbf{r0}}. Έπειτα κάνει τα παρακάτω:
+\begin{itemize}
+    \item Ελέγχει αν είναι μεγαλύτερο του \english{ASCII} χαρακτήρα $9$. Αν είναι, τότε υποθέτει ότι είναι γράμμα. Αν δεν είναι ελέγχει αν είναι μεγαλύτερο από τον χαρακτήρα $0$. Αν είναι τότε είναι αριθμός. Αν δεν είναι τότε, δεν τον αλλάζουμε αυτό τον χαρακτήρα και πηγαίνουμε στον επόμενο.
+    \item Αν ο χαρακτήρας είναι αριθμός, ο νέος αριθμός που θέλουμε είναι ο αρχικός επαυξημένος κάτα $5$ και $\mod{10}$. Αφού ξέρουμε ότι το ψηφίο δεν θα είναι ποτέ πάνω από 15, μπορούμε να βρούμε τον αρχικό αριθμό αφαιρώντας τον χαρακτήρα $0$ σε \english{ASCII} και κάνοντας την πρόσθεση με $5$. Αν ο αριθμός είναι μεγαλύτερος από $10$, τότε αφαιρούμε το $10$ για να φτάσουμε στο επιθυμητό αποτέλεσμα. Τέλος προσθέτουμε τον χαρακτήρα $0$ ξανά για να επανακατασκευάσουμε τον χαρακτήρα μας.
+    \item Αν ο χαρακτήρας είναι μεταξύ $65$ και $90$, τότε είναι κεφαλαίο γράμμα και προσθέτουμε $32$ για να το κάνουμε μικρό.
+    \item Αν ο χαρακτήρας είναι μεταξύ $97$ και $122$, τότε είναι μικρό γράμμα, οπότε αφαιρούμε $32$ για να το κάνουμε κεφαλαίο.
+\end{itemize}
+
+Τέλος ελέγχουμε αν η συμβολοσειρά είναι ακριβώς 32 χαρακτήρες, τότε αν ο τελυεταίος χαρακτήρας δεν είναι \english{EOL}, προσθέτουμε ένα χαρακτήρα στο τέλος, ο οποίος είναι \english{EOL}. 
+
+Έπειτα αφαιρούμε όλους τους υπόλοιπους χαρακτήρες από το \english{stdin}. Αυτό το κάνουμε πάλι με \english{read()}. Αν στο \english{read} πάρουμε λιγότερους από 32 χαρακτήρες, τότε το \english{stdin} είναι καθαρό. Αλλιώς ελέγχουμε την οριακή περίπτωση που είναι ακριβώς 32 χαρακτήρες αυτοί που απομένουν. Σε αυτή την περίπτωση ο τελευταίος χαρακτήρας θα ήταν \english{EOL}, οπότε αν είναι επιστρέφουμε στην αρχή του προγράμματος, αλλιώς διαβάζουμε και άλλο. 
+
+\section*{Ερώτημα 2ο: \\ Επικοινωνία των \english{guest} και \english{host} μηχανημάτων \\  μέσω σειριακής θύρας.}
+
+Το ερώτημα αυτό ήταν το πιο πολύπλοκο της εργασίας με διαφορά. Για την επικοινωνία μεταξύ των δύο μηχανημάτων και την ρύθμιση του διάυλου, χρησιμοποιήσαμε την βιβλιοθήκη \english{\textit{termios}}. Στο \english{guest} μηχάνημα, αφού τρέχαμε σε \english{assembly}, καλέσαμε την εξωτερική συνάρτηση \english{\textbf{tcsetattr}}. Χρησιμοποιήσαμε \english{canonical} κατάσταση στον δίαυλο, αφού αυτό μας επέτρεπε με ευκολία να μεταφέρουμε την συμβολοσειρά μέχρι το \english{EOL} έυκολα. Μετά από διάφορες δοκιμές στις ρυθμίσεις, καταλήξαμε σε αυτές που έκαναν το σύστημα να δουλεύει αξιόπιστα.
+
+Για να είναι βέβαιη η επικοινωνία, τρέχαμε πάντα τον \english{guest} πριν τον \english{host}. 
+
+Αρχικά ανοίγουμε την θύρα σε \english{non-blocking mode}, αλλά μετά την μετατρέπουμε σε \english{blocking} από την μερία του \english{host}. Για τον \english{guest} την ανοίγουμε κατευθείαν σε \english{blocking}. Αυτό μας βοήθησε να αποφύγουμε κάποια ανεξήγητα (για εμάς) σφάλματα.
+
+Η μέτρηση χαρακτήρων γίνεται μέσω θέσεων μνήμης, κάθε μια από τις οποίες αντιστοιχεί σε έναν χαρακτήρα \english{ASCII}. Τις αρχικοποιούμε σε χαρακτήρα $0$, γιατί αλλιώς είχαμε προβλήματα (τα οποία πάλι δεν μπορούσαμε να εξηγήσουμε, αλλά μάλλον σχετίζονται με το γεγονός ότι η θέσεις μνήμης ήταν κενές και ο χαρακτήρας \textbackslash$0$ δεν αντιστοιχούσε στην μηδενική τιμή όπως περιμέναμε). 
+
+Ο \english{guest} διατρέχει την συμβολοσειρά που έστειλε ο \english{host} και αυξάνει σε ένα πίνακα τις τιμές εμφάνισης του χαρακτήρα που βρήκε. Μετά διατρέχει τον πίνακα και κρατάει το \english{offset} του πίνακα (το οποίο είναι το \english{ASCII} του χαρακτήρα) και την τιμή για αυτόν που έχει την μέγιστη εμφάνιση. 
+
+Τέλος στέλνει την τριπλέτα (χαρακτήρας, μήκος συμβολοσειράς, εμφανίσεις) για την συμβολοσειρά που στείλαμε. 
+
+Καθώς ένα \english{byte} μπορεί να έχει τιμή μέχρι $127$ δεν ανησυχούμε μήπως κάποια από τις τιμές δεν χωράει σε αυτό, αφού το μήκος της συμβολοσειράς είναι 64 χαρακτήρες το πολύ και ακόμα και αν η μέτρηση ξεκινάει από τον χαρακτήρα $0$, με κωδικό $48$, πάλι η μέγιστη τιμή δεν φτάνεται. 
+
+Δυστυχώς το πρόγραμμα μας δεν παρέχει κάποια ασφάλεια για μεγαλύτερο μήκος συμβολοσειράς, αλλά ο χρήστης θα πρέπει να προσέχει, καθώς τα αποτελέσματα είναι \english{undefined}.
+
+\section*{Ερώτημα 3ο: Σύνδεση κώδικα \english{C} με κώδικα \english{assembly} του επεξεργαστή \english{ARM}.}
+
+Εδώ κάθε συνάρτηση είναι αρκετά μικρή, οπότε είναι εύκολα κατανοητή από τον αναγνώστη, αν έχει υπόψιν ότι οι συμβολοσειρές τελειώνουν με χαρακτήρα \textbackslash 0 και καταλαμβάνουν διαδοχικές τιμές στην μνήμη. Για όλες τις συναρτήσεις περιλαμβάνονται και κάποιοι έλεγχοι εγκυρότητας αποτελέσματος.
+\end{document}

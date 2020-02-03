@@ -8,8 +8,7 @@ reformat_string:
 /* we can't have 0 input characters, so we don't care about this case */
 
 reformat_string_loop:     
-    add r1, r1, #1
-    ldrb r0, [r1]
+    ldrb r0, [r1, #1]!
     cmp r0, #57 /* 9 in ascii */
     bgt reformat_letter
     cmp r0, #48 /* 0 in ascii */
@@ -82,10 +81,13 @@ no_exit:
     
     cmp r5, #32
     bne print_result
+    ldrb r6, [r1, #31]
+    cmp r6, #10
+    beq print_result
 
     add r5, r5, #1
     mov r6, #10   
-    strb r6, [r1, #31]
+    strb r6, [r1, #32]
 
 print_result:
     ldr r1, =output_string_2 /* second argument -> memory location of output string */
@@ -103,6 +105,9 @@ print_result:
 
     cmp r5, #32
     blt main 
+    ldrb r6, [r1, #31]
+    cmp r6, #10
+    beq main
 
 clear_input:
     /* Clear any leftover input */
@@ -111,11 +116,11 @@ clear_input:
     mov r0, #0 /* first argument -> stdin */
     mov r7, #3 /* number of read syscall */
     swi 0
-    cmp r0, #32 /* First check the length - 2 characters ('q\n' or 'Q\n') */
+    cmp r0, #32 /* First check the length. If less than 32 then all the input is cleared */
     bne main
-    ldrb r6, [r1, #32]
+    ldrb r6, [r1, #31]
     cmp r6, #10
-    beq clear_input
+    bne clear_input
 
     b main
 
