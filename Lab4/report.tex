@@ -1,0 +1,256 @@
+\documentclass{article}
+
+    % Input language encoding
+    \usepackage[utf8]{inputenc}
+   
+    % Output languages
+    \usepackage[english, greek]{babel}
+    \usepackage{alphabeta}
+    
+    % Fonts
+    \usepackage[T1,LGR]{fontenc}
+    \usepackage{lmodern}
+
+    % Images
+    \usepackage{graphicx}
+    \usepackage{float}
+    \usepackage{caption}
+    \usepackage{subcaption}
+
+    % Math
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+
+    % Paragraph Formatting
+    \usepackage{parskip}
+
+    % Code
+    \usepackage{listings}
+    \usepackage{fancyvrb}
+
+    % Different Enumerations
+    \usepackage{enumitem}
+
+    % Trees
+    \usepackage{qtree}
+
+    % Other Drawings
+    \usepackage{tikz}
+    \usetikzlibrary{shapes,backgrounds}
+
+    % Links
+    \usepackage{hyperref}
+
+    % Color
+    \usepackage{xcolor}
+    \usepackage{tcolorbox}
+
+   
+    %%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Setup
+    %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % For hyperlinks
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue,
+        filecolor=magenta,      
+        urlcolor=cyan,
+    }
+
+    \urlstyle{same}
+    
+    % For code
+    \definecolor{codegreen}{rgb}{0,0.6,0}
+    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+     
+    \lstdefinestyle{mystyle}{
+        backgroundcolor=\color{backcolour},   
+        commentstyle=\color{codegreen},
+        keywordstyle=\color{magenta},
+        numberstyle=\tiny\color{codegray},
+        stringstyle=\color{codepurple},
+        basicstyle=\fontsize{8}{11}\selectfont\ttfamily,
+        breakatwhitespace=false,         
+        breaklines=true,                 
+        captionpos=b,                    
+        keepspaces=true,                 
+        numbers=left,                    
+        numbersep=5pt,                  
+        showspaces=false,                
+        showstringspaces=false,
+        showtabs=false,                  
+        tabsize=4
+    }
+
+    \lstset{style=mystyle}
+
+    % For math
+    \DeclareMathSizes{10}{10}{10}{10}
+    \setlength{\parindent}{0cm}
+
+    % Foreign Language macro
+    \newcommand{\english}[1]{\foreignlanguage{english}{{#1}}}
+
+
+    \title{4η Εργαστηριακή Ασκήσεων \\
+        Σχεδιασμός Ενσωματωμένων Συστημάτων}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\date{}
+\author{Λεωνίδας Αβδελάς $|$ ΑΜ: 03113182}
+
+\maketitle
+\newpage
+
+\section*{Άσκηση 1}
+\subsection*{1.}
+
+Χρησιμοποιήσαμε την συγκεκριμένη αρχιτεκτονική, γιατί το \english{guest} μηχάνημα έχει αυτή την αρχιτεκτονική. Αν προσπαθούσαμε να τρέξουμε ένα \english{cross-compiled} εκτελέσιμο διαφορετικής αρχιτεκτονικής, το εκτελέσιμο θα μας έβγαζε κάποιο σφάλμα, καθώς το εκτελέσιμο περιμένει μια τελείως διαφορετική αρχιτεκτονική όσον αφορά το \english{ISA} του συστήματος. 
+
+\subsection*{2.}
+
+Η βιβλιοθήκη της \english{C} που χρησιμοποιήσαμε είναι η \english{glibc}, καθώς ταιριάζει περισσότερο στις ανάγκες μας. Υπήρχαν δυνατότητες χρήσης βιβιοθηκών που είναι μικρότερες, αλλά αυτές ή δεν υποστηρίζουν \english{ARM} ή δεν υποστηρίζουν το \english{distribution Debian}, οπότε δεν μπορούμε να τις χρησιμοποιήσουμε.
+
+\subsection*{3.}
+
+
+Η εντολή \english{\texttt{file}} μας δίνει τα παρακάτω αποτελέσματα:
+
+
+\begin{otherlanguage}{english}
+    \begin{tcolorbox}[width=\linewidth, colback={backcolour}, colupper=black]
+        ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-armhf.so.3, for GNU/Linux 3.2.0, with debug\_info, not stripped
+    \end{tcolorbox}
+\end{otherlanguage}
+
+Η εντολή \english{\texttt{readelf}}, μας δίνει:
+\begin{otherlanguage}{english}
+    \begin{tcolorbox}[width=\linewidth, colback={backcolour}, colupper=black]
+        ELF Header: \\
+        Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 \\
+        Class:                             ELF32 \\
+        Data:                              2's complement, little endian \\
+        Version:                           1 (current) \\
+        OS/ABI:                            UNIX - System V \\
+        ABI Version:                       0 \\
+        Type:                              EXEC (Executable file) \\
+        Machine:                           ARM \\
+        Version:                           0x1 \\
+        Entry point address:               0x1045c \\
+        Start of program headers:          52 (bytes into file) \\
+        Start of section headers:          14724 (bytes into file) \\
+        Flags:                             0x5000400, Version5 EABI, hard-float ABI \\
+        Size of this header:               52 (bytes) \\
+        Size of program headers:           32 (bytes) \\
+        Number of program headers:         9 \\
+        Size of section headers:           40 (bytes) \\
+        Number of section headers:         37 \\
+        Section header string table index: 36 \\
+        Attribute Section: aeabi \\
+        File Attributes \\
+        Tag\_CPU\_name: "7-A" \\
+        Tag\_CPU\_arch: v7 \\
+        Tag\_CPU\_arch\_profile: Application \\
+        Tag\_ARM\_ISA\_use: Yes \\
+        Tag\_THUMB\_ISA\_use: Thumb-2 \\
+        Tag\_FP\_arch: VFPv3 \\
+        Tag\_Advanced\_SIMD\_arch: NEONv1 \\
+        Tag\_ABI\_PCS\_wchar\_t: 4 \\
+        Tag\_ABI\_FP\_rounding: Needed \\
+        Tag\_ABI\_FP\_denormal: Needed \\
+        Tag\_ABI\_FP\_exceptions: Needed \\
+        Tag\_ABI\_FP\_number\_model: IEEE 754 \\
+        Tag\_ABI\_align\_needed: 8-byte \\
+        Tag\_ABI\_align\_preserved: 8-byte, except leaf SP \\
+        Tag\_ABI\_enum\_size: int \\
+        Tag\_ABI\_VFP\_args: VFP registers \\
+        Tag\_CPU\_unaligned\_access: v6 \\
+        Tag\_MPextension\_use: Allowed \\
+        Tag\_Virtualization\_use: TrustZone
+    \end{tcolorbox}
+\end{otherlanguage}
+
+Το πρώτο πράγμα που παρατηρούμε είναι ότι η αρχιτεκτονική πάνω στην οποία τρέχει το αρχείο είναι \english{ARM}. Ακόμα, λειτουργεί με \english{dynamic linking} και το αρχείο της βιβλιοθήκς που καλεί είναι το \english{\texttt{/lib/ld-linux-armhf.so.3}}. Έχουμε ακόμα πολλές πληροφορίες για τις \english{CPU} για τις οποίες είναι φτιαγμένο αυτό το αρχείο , καθώς και για το \english{ABI}, ώστε να γνωρίζει το λειτουργικό λεπτομέρειες για την διαχείρηση πράξεων κλπ.
+
+\subsection*{4.}
+Καθώς η προτεινούμενη έκδοση του \english{linaro cross-compiler} δεν δούλευε, χρησιμοποιήσαμε μια επόμενη έκδοση. Μεταξύ των δύο αρχείων βλέπουμε αρκετή μεγάλη διαφορά στο μέγεθος, με την έκδοση από το \english{linaro compiler} να είναι $12002$ \english{byte} και το \english{custom toolchain} $16204$. Υποθέτουμε ότι αυτή η διαφορά οφείλεται στην έκδοση του \english{compiler} που χρησιμοποιεί ο \english{cross-compiler}. Συγκεκριμένα η έκδοση του \english{linaro} είναι η 4.8.5 και η έκδοση του \english{custom toolchain} είναι 9.2.0. Έτσι, η νεότερη έκδοση θεωρητικά περιέχει περισσότερες πληροφορίες για βιβλιοθήκες και ρυθμίσεις και άρα είναι μεγαλύτερη.
+
+\subsection*{5.}
+Όπως αναφέραμε παραπάνω με την εντολή \english{file}, ο \english{linker} κάνει \english{dynamic linking} τις βιβλιοθήκες. Έτσι υποθέτει ότι θα βρεί τις \english{ARM} βιβλιοθήκες στον φάκελο \english{\texttt{lib}}. Έτσι παρ'όλο που η βιβλιοθήκη του \english{host} και του \english{target} είναι διαφορετικές, το πρόγραμμα υποθέτει ότι θα βρεί την συγκεκριμένη βιβλιοθήκη στο συγκεκριμένο σημείο, ως \english{convetion} των \english{UNIX-type systems}.
+
+\subsection*{6.}
+Όπως βλέπουμε και εδώ η διαφορά είναι πολύ μεγάλη. Συγκεκριμένα για το αρχείο από τον \english{linaro cross-compiler} έχουμε μέγεθος $2702174$ \english{bytes}, ενώ για το αρχείο από τον \english{custom cross-compiler} $4139036$ \english{bytes}. Αυτό μπορεί να συμβαίνει για δύο λόγους:
+\begin{itemize}
+    \item Αρχικά, μπορεί ο \english{linaro cross-compiler} να έχει απενεργοποιήσει μέρη της βιβλιοθήκης κάτα την δημιουργία του, καθώς αυτά μπορεί να θεωρήθηκαν μη-χρήσιμα από τους δημιουργούς.
+    \item Ακόμα, καθώς η διαφορά μεταξύ των δύο εκδόσεων του \english{compiler} είναι 5 χρόνια, πολλά πράγματα έχουν αλλάξει και έχουν προστεθεί νέες συναρτήσεις στην \english{glibc}, με αποτέλεσμα να μεγαλώσει σε μέγεθος. 
+\end{itemize}
+\subsection*{7.}
+
+Η τροποποίηση της \english{glibc} αποδείχτηκε μια αρκετά δύσκολη εργασία. Αποφασίσαμε να προσθέσουμε να προσθέσουμε την συνάρτηση σε μια ήδη υπάρχουσα βιβλιοθήκη συναρτήσεων και συγκεκριμένα στην \english{\texttt{stdlib}}, καθώς αυτό ήταν αρκετά ευκολότερο. Χρήσιμος οδηγός μας φάνηκε \href{https://github.com/rishiba/doc_syscalls/blob/master/doc/03_glibc.rst}{αυτό} το \english{documentation}. Τα βήματα που ακολουθήσαμε είναι τα παρακάτω:
+\begin{enumerate}
+  \item Αρχικά ορίσαμε την συνάρτηση στο αρχείο \english{\texttt{stdlib/stdlib.h}}. 
+  \item Έπειτα δημιουργήσαμε το αρχείο \english{\texttt{mlab\_foo.c}} και προσθέσαμε την συνάρτηση μας.
+  \item Προσθέσαμε στο \english{\texttt{Makefile}} το \english{mlab\_foo} στις \english{routines}, ώστε να γίνει \english{compile} το αρχείο μας.
+  \item Τέλος, για να δουλεύει ο \english{Dynamic Linker} έπρεπε να προσθέσουμε την συνάρτηση στο αρχείο \english{Versions}, το οποίο όπως καταλάβαμε από το ελάχιστο \english{documentation} χρησιμοποιήται κάπως σαν \english{symbol table} για τις συναρτήσεις. Αυτό το βήμα εντοπίστηκε τυχαία από συνεργάτη από άλλη ομάδα και μετά χτίσαμε τις πληροφορίες για το λόγο που δουλεύει από το \english{wiki} της \english{glibc}. Πιο συγκεκριμένα, ένα κομμάτι της λογικής μας βγήκε από \href{https://sourceware.org/glibc/wiki/Development/Versioning_A_Structure}{αυτό} το άρθρο και ένα κομμάτι από της γνώσεις μας στο πώς δουλεύουν οι \english{compilers}. Το θέμα αυτό είναι ένα που δεν έχουμε κατανοήσει πλήρως, αλλά θεωρούμε ότι ξεφεύγει αρκετά και από το θέμα του μαθήματος, οπότε αποφασίσαμε να μην επεκταθούμε.
+\end{enumerate}
+
+Ακόμα ανακαλύψαμε ότι το \english{qemu} έχει συνδέσει τα εκτελέσιμα για \english{ARM} με το πρόγραμμα \english{\texttt{qemu arm}} και έτσι το \english{host} μηχάνημας μας μπορεί να τρέχει \english{ARM} αρχεία. Περισσότερες πληροφορίες \href{https://stackoverflow.com/questions/37912290/arm-linux-executable-mysteriously-runs-on-x86-64}{εδώ}.
+
+Για τα ερωτήματα έχουμε:
+\begin{enumerate}
+  \item Απενεργοποιώντας την παραπάνω λειτουργία, παίρνουμε το παρακάτω \english{error message}:
+  \begin{otherlanguage}{english}
+    \begin{tcolorbox}[width=\linewidth, colback={backcolour}, colupper=black]
+      bash: ./my\_foo: cannot execute binary file: Exec format error
+    \end{tcolorbox}
+  \end{otherlanguage}
+  \item Αν το τρέξουμε στο \english{guest} μηχάνημα, θα έχουμε:
+  \begin{otherlanguage}{english}
+    \begin{tcolorbox}[width=\linewidth, colback={backcolour}, colupper=black]
+      ./my\_foo: relocation error: ./my\_foo: symbol mlab\_foo, version GLIBC\_2.4 not defined in file libc.so.6 with link time reference
+    \end{tcolorbox}
+  \end{otherlanguage}
+  Αυτό το περιμέναμε, αφού ο \english{Dynamic Linker} του \english{target} μηχανήματος δεν μπορεί να βρει το σύμβολο της συνάρτησης που ψάχνουμε.
+  \item Κάνοντας \english{static linking} της βιβλιοθήκης το πρόγραμμα τρέχει κανονικά, όπως και περιμέναμε, αφού η βιβλιοθήκη περιλαμβάνεται στο αρχείο.
+\end{enumerate}
+
+\section*{Άσκηση 2}
+
+Ακολουθώντας τα βήματα, αντιμετωπίσαμε πρόβλημα όταν εκκαταστήσαμε τον πυρήνα στο \english{target} μηχάνημα. Πιο συγκεκριμένα, ενώ αν χρησιμοποιούσαμε το αρχικό \english{kernel} το μηχάνημα ξεκινούσε κανονικά, αν δοκιμάζαμε το καινούριο,δεν δούλευε καθόλου, απλά έβγαζε μια μαύρη οθόνη και δεν αντιδρούσε σε καμία εντολή από το τερματικό. 
+
+Έπειτα από υπόδειξη συναδέλφου, εντοπίσαμε ότι υπάιτιος ήταν το \english{configuration file}. Έτσι πήραμε το \english{configuration file} που ήταν στο \english{\texttt{/boot}} φάκελο του μηχανήματος από πριν (ονομαζόταν συγκεκριμένα \english{\texttt{config-3.2.0-4-vexpress}}) και το χρησιμοποιήσαμε για να ρυθμίσουμε το \english{compilation} του \english{kernel}.
+
+Το σύστημα μας δούλεψε κανονικά μετά και το αποτέλεσμα του \english{\texttt{uname -a}} ήταν:
+
+\begin{otherlanguage}{english}
+  \begin{tcolorbox}[width=\linewidth, colback={backcolour}, colupper=black]
+    Linux debian-armhf 3.16.81 \#1 SMP Thu Feb 20 23:39:30 EET 2020 armv7l GNU/Linux
+  \end{tcolorbox}
+\end{otherlanguage}
+
+Αυτό που βλέπουμε να αλλάζει ουσιαστικά είναι η έκδοση του λειτουργικού, η οποία πλέον είναι \texttt{3.18.81}, ενώ πριν ήταν \texttt{3.2.0.4}.
+
+Για να φτιάξουμε το δικό μας \english{system call}, ακολουθούμε τα παρακάτω βήματα:
+\begin{enumerate}
+  \item Αρχικά, προσθέτουμε ένα φάκελο \english{\texttt{hello}}, στον κύριο φάκελο του \english{kernel}. Εκεί θα προσθέσουμε την συνάρτηση μας.
+  \item Μέσα δημιουργούμε ένα αρχείο \english{\texttt{hello.c}} και ένα \english{\texttt{Makefile}} που θα το μετατρέψει σε \english{object file}.
+  \item Ακόμα προσθέτουμε τον φάκελο του \english{system call} μας στο \english{Makefile} του \english{kernel} στον κανόνα για τα \english{\texttt{core-y}}.
+  \item Τώρα πρέπει να προσθέσουμε το \english{interrupt} για το \english{system call} μας. Αρχικά την προσθέτουμε στο αρχείο \english{\texttt{/arch/arm/kernel/calls.S}} με κωδικό $386$. Εκεί το προσθέτουμε γράφοντας \english{\texttt{CALL(sys\_hello)}}. Εδώ υπολογίζουμε και το \english{padding} που πρέπει να προσθέσουμε, το οποίο ισούται με \english{$((\text{NR\_SYSCALLS} + 3)$ \&\textasciitilde{}$3) - \text{NR\_SYSCALLS}$}, άρα 2 στην περίπτωση μας.
+  \item Μετά την προσθέτουμε στο αρχείο \\ \english{\texttt{/arch/arm/include/uapi/asm/unistd.h}} γράφοντας \english{\texttt{\#define \_\_NR\_hello (\_\_NR\_SYSCALL\_BASE+386)}}. 
+  \item Ακόμα προσθέτουμε στο πλήθος των \english{system calls} σε 388 στο \\ \english{\texttt{/arch/arm/include/asm/unistd.h}}, σύμφωνα με τον υπολογισμό του \english{padding}.
+  \item Τέλος, προσθέτουμε τον ορισμό της συνάρτησης μας στο \english{\texttt{include/linux/syscalls.h}}.
+\end{enumerate}
+
+Μετά από αυτά τα βήματα, το \english{compilation} του προγράμματος έγινε κανονικά. Προσθέσαμε το \english{kernel} στον \english{guest} με τον ίδιο τρόπο και δοκιμάσαμε το \english{system call} μας, με τον δοκιμαστικό κώδικα. Γράφοντας \english{\texttt{dmesg | tail}} πήραμε 
+
+\begin{otherlanguage}{english}
+  \begin{tcolorbox}[width=\linewidth, colback={backcolour}, colupper=black]
+    [  266.871655] Greeting from kernel and team no B5.
+  \end{tcolorbox}
+\end{otherlanguage}
+\end{document}

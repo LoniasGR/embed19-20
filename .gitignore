@@ -28,8 +28,16 @@ dijkstra_DYNARR
 # Lab 3
 host
 
+# Lab 4
+/Lab4/Part1/*.out
+
 # Latex intermediate files
 *.gz
+*.aux
+*.log
+report.out
+*.fls
+*.fdb_latexmk
 
 # VSCode
 .vscode
